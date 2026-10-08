@@ -1,0 +1,8 @@
+.{
+    .namn = "Lagranges medelvärdessats",
+    .paa_listan = true,
+    .nyckelord = .{
+        "lagrange",
+        "medelvärden",
+    },
+}

@@ -1,0 +1,8 @@
+.{
+    .namn = "Fermats sats",
+    .paa_listan = false,
+    .nyckelord = .{
+        "fermat",
+        "extremvärden",
+    },
+}

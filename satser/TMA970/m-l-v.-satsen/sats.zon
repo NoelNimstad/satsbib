@@ -1,0 +1,8 @@
+.{
+    .namn = "Satsen om mellanliggande värden",
+    .paa_listan = false,
+    .nyckelord = .{
+        "mellanliggande värden",
+        "kontinuerliga funktioner",
+    },
+}

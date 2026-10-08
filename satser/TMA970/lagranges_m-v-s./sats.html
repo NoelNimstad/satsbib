@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lagranges medelvärdesats</title>
+	<link rel="stylesheet" href="../../../res/styles.css"/>
+	<script src="../../../res/db.js" defer></script>
+	<script src="../../../res/sats.js" defer></script>
+	<!-- Externa resurser -->
+	<link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="../../../index.html">Hem</a>
+			<button id="soek-knapp">Sök</button>
+		</nav>
+		<h1>Lagranges medelvärdesats</h1>
+	</header>
+	<h3>Formulering</h3>
+	<p>
+		Om \( f\in\mathcal{C}([a,b]) \) är deriverbar på \((a,b)\exists c\in(a,b) \) s.a.:
+		$$
+			f'(c)=\frac{f(b)-f(a)}{b-a}.
+		$$
+	</p>
+	<h3>Bevis</h3>
+	<p>
+		Låt \( \ell \) vara linjen mellan ändpunkterna av \( f \) under intervallet \( [a,b] \), alltså:
+		$$
+			\ell:x\mapsto f(a)+\frac{f(b)-f(a)}{b-a}(x-a).
+		$$
+		Låt sedan \( g \) vara funktionen som uttrycker differensen av \( f \) och \( \ell \), dvs:
+		$$
+			g:x\mapsto f(x)-\ell(x).
+		$$
+		Per definitionen av \( \ell \) följer att \( g(a)=g(b)=0 \). Eftersom som \( g\in\mathcal{C}([a,b]) \) och deriverbar på \( (a,b) \), följer det av Rolles sats att det finns ett \( c\in(a,b) \) s.a.:
+		$$
+		\begin{align*}
+			g'(c)=0
+			\implies&f'(c)-\left(f(a)+\frac{f(b)-f(a)}{b-a}(x-a)\right)'=0 \\
+			\iff&f'(c)-\frac{f(b)-f(a)}{b-a}=0\\
+			\iff&f'(c)=\frac{f(b)-f(a)}{b-a}.
+		\end{align*}
+		$$
+		<div class="qed"></div>
+	</p>
+</body>
+</html>

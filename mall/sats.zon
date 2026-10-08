@@ -1,0 +1,11 @@
+.{
+    .namn = "SATS NAMN",
+    .paa_listan = true,
+    .nyckelord = .{
+        "dragos",
+        "röst",
+        "isar",
+        "i",
+        "blodet",
+    },
+}
