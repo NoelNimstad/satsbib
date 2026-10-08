@@ -139,3 +139,17 @@ const rengoerHtml = str =>
         .replaceAll('>', "&gt;")
         .replaceAll('\"', "&quot;");
 }
+
+// lägg till footer
+{
+	const footer = document.createElement("footer");
+	footer.innerHTML = `
+		<p>
+			satsbib
+			・<a href="https://github.com/NoelNimstad/satsbib">GitHub</a>
+			・${ new Date().getFullYear() }
+		</p>
+	`;
+
+	document.body.append(footer);
+}
