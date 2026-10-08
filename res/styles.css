@@ -11,7 +11,7 @@ p + ul
 
 .qed::after
 {
-	content: '⬛︎';
+	content: '◼';
 	position: absolute;
 	right: 0;
 }
