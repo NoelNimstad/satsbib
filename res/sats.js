@@ -104,7 +104,7 @@ const rendreraResultat = (q, div) =>
 
     div.innerHTML = hits.map(item => `
         <div style="border-bottom: 1px solid var(--border); padding: 0.8rem 0;">
-			<a href="/satser/${ item.kurs }/${ item.fil_namn }/sats.html">
+			<a href="satser/${ item.kurs }/${ item.fil_namn }/sats.html">
 				<strong style="font-size: 1.1em;">
 					${ rengoerHtml(item.sats) }
 				</strong> 
