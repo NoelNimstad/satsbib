@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rolles sats</title>
+	<link rel="stylesheet" href="../../../res/styles.css"/>
+	<script src="../../../res/db.js" defer></script>
+	<script src="../../../res/sats.js" defer></script>
+	<!-- Externa resurser -->
+	<link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="../../../index.html">Hem</a>
+			<button id="soek-knapp">Sök</button>
+		</nav>
+		<h1>Rolles sats</h1>
+	</header>
+	<h3>Formulering</h3>
+	<p>
+		Låt \( f\in\mathcal{C}([a,b]) \) där \( f \) är deriverbar på \( (a,b) \). Om \( f(a)=f(b) \), då följer att \( \exists c\in(a,b) \) s.a. \( f'(c)=0 \).
+	</p>
+	<h3>Bevis</h3>
+	<p>Vi delar upp beviset i två delar:</p>
+	<b>Del I. \( f(x)=C\forall x\in[a,b] \)</b>
+	<p>
+		En konstant funktion på ett interval har en derivata som är lika med \( 0 \) i sitt inre definitionsområde. Det följer alltså triviellt att \( \exists c\in(a,b) \), t.ex. \( c=\frac{a+b}{2} \), s.a. \( f'(c)=0 \).
+	</p>
+	<b>Del II. \( f(x)\neq C\forall x\in[a,b] \)</b>
+	<p>
+		Om funktionen inte är konstant på intervalet, så följer det av <a class="sats">Weierstrass sats</a> att eftersom funktionen är kontinuerlig på interval, att \( \exists\eta\in(a,b) \) s.a. \( f(\eta)= \) extremum av \( f \). Eftersom funktionen är kontinuerlig vid \( \eta \) och \( \eta \) inte är en randpunkt, ger <a class="sats">Fermats sats</a> att:
+		$$
+			f'(\eta)=0
+		$$
+	</p>
+	<div class="qed"></div>
+</body>
+</html>

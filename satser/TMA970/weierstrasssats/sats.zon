@@ -1,0 +1,9 @@
+.{
+    .namn = "Weierstrass sats",
+    .paa_listan = false,
+    .nyckelord = .{
+        "weierstrass",
+        "extremvärden",
+        "kontinuerliga funktioner",
+    },
+}

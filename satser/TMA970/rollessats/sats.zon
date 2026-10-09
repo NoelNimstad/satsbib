@@ -1,0 +1,9 @@
+.{
+    .namn = "Rolles sats",
+    .paa_listan = true,
+    .nyckelord = .{
+        "rolle",
+        "extremvärden",
+        "derivator",
+    },
+}

@@ -11,7 +11,15 @@ p + ul
 
 .qed::after
 {
-	content: '◼';
+	content: '⬛︎';
+	font-size: 1rem;
 	position: absolute;
 	right: 0;
+}
+
+.finns-inte
+{
+	color: rgb(184, 8, 8);
+	text-decoration: underline;
+	cursor: not-allowed;
 }

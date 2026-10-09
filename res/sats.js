@@ -153,3 +153,17 @@ const rengoerHtml = str =>
 
 	document.body.append(footer);
 }
+
+[...document.getElementsByClassName("sats")].forEach(s =>
+{
+	const db_sats = db.find(e => e.sats == s.innerText);
+	if(!db_sats)
+	{
+		return s.classList.add("finns-inte");
+	}
+
+	s.setAttribute(
+		"href",
+		`../../${ db_sats.kurs }/${ db_sats.fil_namn }/sats.html`
+	);
+});
