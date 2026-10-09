@@ -4,5 +4,6 @@
     .nyckelord = .{
         "lagrange",
         "medelvärden",
+        "derivator",
     },
 }

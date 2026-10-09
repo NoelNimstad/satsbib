@@ -1,0 +1,21 @@
+# TMA970
+- [x] Faktorsatsen för polynom
+- [ ] Eventuella rationella nollställen till polynom
+- [ ] Binomialsatsen
+- [ ] Ett SGV (sida 76)
+- [ ] Räknereglerna för gränsvärden
+- [ ] e:s talföljd är växande och begränsad
+- [ ] Deriverbarhet => kontinuitet
+- [ ] Kedjeregeln (under förenklat antagande)
+- [ ] Derivatan av en invers funktion
+- [ ] Derivatan av exponentialfunktionen
+- [ ] Derivatan av *några* trigenometriska funktioner
+- [x] Rolles sats
+- [x] Lagranges sats
+- [ ] Om derivatan för en funktion är noll på ett intervall, så är funktionen konstant på detta intervall
+- [ ] Partiell integration
+- [ ] Variabel substitution
+- [ ] Integralkalkylens medelvärdessats
+- [ ] Analysens huvudsats
+- [ ] Insättningsformeln
+- [ ] Jämförelsesatsen
