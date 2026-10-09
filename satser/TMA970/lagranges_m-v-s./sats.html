@@ -19,33 +19,39 @@
 		</nav>
 		<h1>Lagranges medelvärdesats</h1>
 	</header>
-	<h3>Formulering</h3>
-	<p>
-		Om \( f\in\mathcal{C}([a,b]) \) är deriverbar på \((a,b)\exists c\in(a,b) \) s.a.:
-		$$
-			f'(c)=\frac{f(b)-f(a)}{b-a}.
-		$$
-	</p>
-	<h3>Bevis</h3>
-	<p>
-		Låt \( \ell \) vara linjen mellan ändpunkterna av \( f \) under intervallet \( [a,b] \), alltså:
-		$$
-			\ell:x\mapsto f(a)+\frac{f(b)-f(a)}{b-a}(x-a).
-		$$
-		Låt sedan \( g \) vara funktionen som uttrycker differensen av \( f \) och \( \ell \), dvs:
-		$$
-			g:x\mapsto f(x)-\ell(x).
-		$$
-		Per definitionen av \( \ell \) följer att \( g(a)=g(b)=0 \). Eftersom som \( g\in\mathcal{C}([a,b]) \) och deriverbar på \( (a,b) \), följer det av Rolles sats att det finns ett \( c\in(a,b) \) s.a.:
-		$$
-		\begin{align*}
-			g'(c)=0
-			\implies&f'(c)-\left(f(a)+\frac{f(b)-f(a)}{b-a}(x-a)\right)'=0 \\
-			\implies&f'(c)-\frac{f(b)-f(a)}{b-a}=0\\
-			\iff&f'(c)=\frac{f(b)-f(a)}{b-a}.
-		\end{align*}
-		$$
-		<div class="qed"></div>
-	</p>
+	<main>
+		<section>
+			<h3>Formulering</h3>
+			<p>
+				Om \( f\in\mathcal{C}([a,b]) \) är deriverbar på \((a,b)\exists c\in(a,b) \) s.a.:
+				$$
+					f'(c)=\frac{f(b)-f(a)}{b-a}.
+				$$
+			</p>
+		</section>
+		<section>
+			<h3>Bevis</h3>
+			<p>
+				Låt \( \ell \) vara linjen mellan ändpunkterna av \( f \) under intervallet \( [a,b] \), alltså:
+				$$
+					\ell:x\mapsto f(a)+\frac{f(b)-f(a)}{b-a}(x-a).
+				$$
+				Låt sedan \( g \) vara funktionen som uttrycker differensen av \( f \) och \( \ell \), dvs:
+				$$
+					g:x\mapsto f(x)-\ell(x).
+				$$
+				Per definitionen av \( \ell \) följer att \( g(a)=g(b)=0 \). Eftersom som \( g\in\mathcal{C}([a,b]) \) och deriverbar på \( (a,b) \), följer det av Rolles sats att det finns ett \( c\in(a,b) \) s.a.:
+				$$
+				\begin{align*}
+					g'(c)=0
+					\implies&f'(c)-\left(f(a)+\frac{f(b)-f(a)}{b-a}(x-a)\right)'=0 \\
+					\implies&f'(c)-\frac{f(b)-f(a)}{b-a}=0\\
+					\iff&f'(c)=\frac{f(b)-f(a)}{b-a}.
+				\end{align*}
+				$$
+				<div class="qed"></div>
+			</p>
+		</section>
+	</main>
 </body>
 </html>
