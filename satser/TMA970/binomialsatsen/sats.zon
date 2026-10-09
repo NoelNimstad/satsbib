@@ -1,0 +1,9 @@
+.{
+    .namn = "Binomialsatsen",
+    .paa_listan = true,
+    .nyckelord = .{
+        "binomial",
+        "kombinatorik",
+        "induktion",
+    },
+}

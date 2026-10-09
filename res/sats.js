@@ -54,17 +54,32 @@
     });
 
     const soekKnapp = document.getElementById("soek-knapp");
-    if(soekKnapp)
+	(f =>
 	{
-        soekKnapp.addEventListener("click", () =>
+		soekKnapp?.addEventListener("click", () => f());
+		window.addEventListener("keydown", e =>
 		{
-            dialog.showModal();
-            input.value = "";
-            rendreraResultat("", resultatDiv);
-            input.focus();
-        });
-    }
+			if(e.key == '§')
+			{
+				e.preventDefault();
+				f();
+			}
+		});
+	})(() =>
+	{
+		dialog.showModal();
+		input.value = "";
+		rendreraResultat("", resultatDiv);
+		input.focus();
+	});
 }
+
+const byggSatsURL = (kurs, filNamn) =>
+{
+    const ärSatsSida = window.location.href.includes("/satser/");
+    const prefix = ärSatsSida ? "../../" : "satser/";
+    return `${prefix}${kurs}/${filNamn}/sats.html`;
+};
 
 // Filtrera data och rendrera HTML
 const rendreraResultat = (q, div) =>
@@ -104,7 +119,7 @@ const rendreraResultat = (q, div) =>
 
     div.innerHTML = hits.map(item => `
         <div style="border-bottom: 1px solid var(--border); padding: 0.8rem 0;">
-			<a href="satser/${ item.kurs }/${ item.fil_namn }/sats.html">
+			<a href="${ byggSatsURL(item.kurs, item.fil_namn) }">
 				<strong style="font-size: 1.1em;">
 					${ rengoerHtml(item.sats) }
 				</strong> 

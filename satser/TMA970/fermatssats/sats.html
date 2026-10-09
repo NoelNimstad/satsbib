@@ -21,12 +21,32 @@
 	</header>
 	<h3>Formulering</h3>
 	<p>
-		Om \(\xi\) är globalt maximum till \(f:I\to\mathbb{R}\), så följer det att en av följande är sant:
+		Om \(\xi\) är globalt extremum till \(f:I\to\mathbb{R}\), så följer det att en av följande är sant:
 	</p>
 	<ul>
 		<li>\(f'(\xi)=0\)</li>
 		<li>\(f\) är inte deriverbar vid \(\xi\)</li>
 		<li>\(\xi\in\partial I\cap I\)</li>
 	</ul>
+	<h3>Bevis*</h3>
+	<small>
+		*Detta bevis är endast för kriteriet \( f'(\xi)=0 \) vid <i>lokala</i> extremum.
+	</small>
+	<p>
+		Låt \( \xi \) vara ett lokalt maximum till \( f \) på intervallet (beviset för minimum är analogt). Då \( \exists \) en omgivning \( X \) runt \( \xi \) s.a. \( f(x)\leq f(\xi)\forall x\in X \). Betrakta sedan uttrycket
+		$$
+			\frac{f(x)-f(\xi)}{x-\xi}.
+		$$
+		kvoten är icke-positiv om \( x>\xi \), alltså innebär detta att
+		$$
+			\lim_{x\to\xi^+}\frac{f(x)-f(\xi)}{x-\xi}\leq 0.
+		$$
+		Om \( x<\xi \), då blir kvoten icke-negativ, och alltså följer det att
+		$$
+			\lim_{x\to\xi^-}\frac{f(x)-f(\xi)}{x-\xi}\geq 0.
+		$$
+		Eftersom \( f \) är deriverbar vid \( \xi \), måste dessa gränsvärden ha samma värde, vilket händer endast om de båda går mot \( 0 \). Därför gäller för ett lokalt extremum \( \xi \) att \( f'(\xi)=0 \).
+	</p>
+	<div class="qed"></div>
 </body>
 </html>

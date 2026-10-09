@@ -23,3 +23,8 @@ p + ul
 	text-decoration: underline;
 	cursor: not-allowed;
 }
+
+small
+{
+	color: gray;
+}

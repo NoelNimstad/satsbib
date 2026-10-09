@@ -1,6 +1,6 @@
 .{
     .namn = "Fermats sats",
-    .paa_listan = false,
+    .paa_listan = true,
     .nyckelord = .{
         "fermat",
         "extremvärden",

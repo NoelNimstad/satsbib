@@ -1,7 +1,7 @@
 # TMA970
 - [x] Faktorsatsen för polynom
 - [ ] Eventuella rationella nollställen till polynom
-- [ ] Binomialsatsen
+- [/] Binomialsatsen
 - [ ] Ett SGV (sida 76)
 - [ ] Räknereglerna för gränsvärden
 - [ ] e:s talföljd är växande och begränsad
@@ -10,6 +10,7 @@
 - [ ] Derivatan av en invers funktion
 - [ ] Derivatan av exponentialfunktionen
 - [ ] Derivatan av *några* trigenometriska funktioner
+- [x] Om derivatan i lokala extrempunkter 
 - [x] Rolles sats
 - [x] Lagranges sats
 - [ ] Om derivatan för en funktion är noll på ett intervall, så är funktionen konstant på detta intervall
