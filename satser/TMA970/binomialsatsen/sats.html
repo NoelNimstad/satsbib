@@ -23,11 +23,60 @@
 		<section>
 			<h3>Formulering</h3>
 			<p>
-				Utveckingen av binomet \( x+y \) upphöjt till något \( n\in\mathbb{N} \) ges av summan:
+				Utvecklingen av binomet \( x+y \) upphöjt till något \( n\in\mathbb{N}^+ \) ges av summan:
 				$$
-					(x+y)^n=\sum_{k=0}^nx^{n-k}y^{k}
+					(x+y)^n=\sum_{k=0}^n{n\choose k}x^ky^{n-k}
 				$$
 			</p>
+		</section>
+		<section>
+			<h3>Bevis</h3>
+			<p>
+				Vi börjar med att betrakta uttrycket \( (x+y)^n \):
+				$$
+					(x+y)^n=y^n\left(1+\frac{x}{y}\right)^n.
+				$$
+				Altså räcker det att bevisa satsen för binomet \( (1+x)^n \).
+			</p>
+			<aside>
+				<p>
+					<b>Varför induktion?</b>
+				</p>
+				<p>
+					Beviset blir mer formellt med induktion.
+				</p>
+			</aside>
+			<p>
+				Vi använder induktion för att bevisa satsen. Låt \( S_n \) vara utsagan
+				$$
+					S_n:(1+x)^n=\sum_{k=0}^n{n\choose k}x^k.
+				$$
+				För \( S_1 \) gäller att:
+				$$
+				\begin{align*}
+					S_1:(1+x)^1
+					&=\sum_{k=0}^1{1\choose k}x^k\\
+					&=1+x\quad\checkmark
+				\end{align*}
+				$$
+				Alltså är \( S_1 \) sant. Antag sedan att \( S_m \) är sant för något fixt \( m\in\mathbb{N}^+ \). Vi vill visa att \( S_m\implies S_{m+1} \).
+				$$
+				\begin{align*}
+					S_{m+1}:(1+x)^{m+1}
+					&=(1+x)(1+x)^m\\
+					&\stackrel{\text{IA}}{=}(1+x)\sum_{k=0}^m{m\choose k}x^k\\
+					&=\sum_{k=0}^m{m\choose k}x^k+\sum_{k=0}^m{m\choose k}x^{k+1}\\
+					&=\sum_{k=0}^m{m\choose k}x^k+\sum_{k=1}^{m+1}{m\choose k-1}x^k\\
+					&=1+\sum_{k=1}^m{m\choose k}x^k+\sum_{k=1}^{m}\left[{m\choose k-1}x^k\right]+x^{k+1}\\
+					&=1+\sum_{k=1}^m\left[{m\choose k}+{m\choose k-1}\right]x^k+x^{k+1}\\
+					&=1+\sum_{k=1}^m{m+1\choose k}x^k+x^{k+1}\\
+					&={m+1\choose 0}x^0+\sum_{k=1}^m{m+1\choose k}x^k+{m+1\choose m+1}x^{k+1}\\
+					&=\sum_{k=0}^{m+1}{m+1\choose k}x^k
+				\end{align*}
+				$$
+				Vi ser därför att \(S_m\implies S_{m+1}\). På grund av detta, och att \( S_1 \) är sant, följer det av induktionsaxiomet att \( S_n \) är sant \( \forall n\in\mathbb{N}^+ \).
+			</p>
+			<div class="qed"></div>
 		</section>
 	</main>
 </body>
