@@ -1,0 +1,8 @@
+.{
+    .namn = "Faktorsatsen",
+    .paa_listan = true,
+    .nyckelord = .{
+        "faktor",
+        "polynom",
+    },
+}

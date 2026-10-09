@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Faktorsatsen</title>
+	<link rel="stylesheet" href="../../../res/styles.css"/>
+	<script src="../../../res/db.js" defer></script>
+	<script src="../../../res/sats.js" defer></script>
+	<!-- Externa resurser -->
+	<link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="../../../index.html">Hem</a>
+			<button id="soek-knapp">Sök</button>
+		</nav>
+		<h1>Faktorsatsen</h1>
+	</header>
+	<h3>Formulering</h3>
+	<p>
+		Om \( (x-k) \) är en faktor till polynomet \( p\iff k \) är ett
+		nollställe till \( p \).
+	</p>
+	<h3>Bevis</h3>
+	<p>
+		Antag \( k \) är s.a. \( p(k)=0 \). Enligt polynomdivision gäller att:
+		$$
+			p(x)=(x-k)q(x)+r(x)
+		$$
+		där \( \operatorname{grad} r<\operatorname{grad}(x-k)=1 \), altså \( \operatorname{grad} r=0\implies r\) är en konstant.
+		Då \( p(k)=0 \) följer det att:
+		$$
+		\begin{align*}
+			0&=(k-k)q(x)+r\\
+			&=r
+		\end{align*}
+		$$
+		Alltså kan \( p \) skrivas som:
+		$$
+			p(x)=(x-k)q(x)
+		$$
+		<div class="qed"></div>
+	</p>
+</body>
+</html>
