@@ -36,7 +36,7 @@
 				$$
 					(x+y)^n=y^n\left(1+\frac{x}{y}\right)^n.
 				$$
-				Altså räcker det att bevisa satsen för binomet \( (1+x)^n \).
+				Alltså räcker det att bevisa satsen för binomet \( (1+x)^n \).
 			</p>
 			<aside>
 				<p>
@@ -67,15 +67,15 @@
 					&\stackrel{\text{IA}}{=}(1+x)\sum_{k=0}^m{m\choose k}x^k\\
 					&=\sum_{k=0}^m{m\choose k}x^k+\sum_{k=0}^m{m\choose k}x^{k+1}\\
 					&=\sum_{k=0}^m{m\choose k}x^k+\sum_{k=1}^{m+1}{m\choose k-1}x^k\\
-					&=1+\sum_{k=1}^m{m\choose k}x^k+\sum_{k=1}^{m}\left[{m\choose k-1}x^k\right]+x^{k+1}\\
-					&=1+\sum_{k=1}^m\left[{m\choose k}+{m\choose k-1}\right]x^k+x^{k+1}
+					&=1+\sum_{k=1}^m{m\choose k}x^k+\sum_{k=1}^{m}\left[{m\choose k-1}x^k\right]+x^{m+1}\\
+					&=1+\sum_{k=1}^m\left[{m\choose k}+{m\choose k-1}\right]x^k+x^{m+1}
 				\end{align*}
 				$$
 				Nu använder vi <a class="sats">Pascals identitet</a> för att förenkla binomialkoefficientuttrycket:
 				$$
 				\begin{align*}
-					S_{m+1}:(1+x)^{m+1}&=1+\sum_{k=1}^m{m+1\choose k}x^k+x^{k+1}\\
-					&={m+1\choose 0}x^0+\sum_{k=1}^m{m+1\choose k}x^k+{m+1\choose m+1}x^{k+1}\\
+					S_{m+1}:(1+x)^{m+1}&=1+\sum_{k=1}^m{m+1\choose k}x^k+x^{m+1}\\
+					&={m+1\choose 0}x^0+\sum_{k=1}^m{m+1\choose k}x^k+{m+1\choose m+1}x^{m+1}\\
 					&=\sum_{k=0}^{m+1}{m+1\choose k}x^k
 				\end{align*}
 				$$
