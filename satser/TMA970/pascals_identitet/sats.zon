@@ -1,0 +1,9 @@
+.{
+    .namn = "Pascals identitet",
+    .paa_listan = false,
+    .nyckelord = .{
+        "identitet",
+        "pascal",
+        "kombinatorik",
+    },
+}

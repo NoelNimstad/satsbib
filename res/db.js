@@ -1,6 +1,7 @@
 const db = [
 	{"kurs":"TMA970","fil_namn":"fermatssats","sats":"Fermats sats","paa_listan":true,"nyckelord":["fermat","extremvärden"]},
 	{"kurs":"TMA970","fil_namn":"m-l-v.-satsen","sats":"Satsen om mellanliggande värden","paa_listan":false,"nyckelord":["mellanliggande värden","kontinuerliga funktioner"]},
+	{"kurs":"TMA970","fil_namn":"pascals_identitet","sats":"Pascals identitet","paa_listan":false,"nyckelord":["identitet","pascal","kombinatorik"]},
 	{"kurs":"TMA970","fil_namn":"faktorsatsen","sats":"Faktorsatsen","paa_listan":true,"nyckelord":["faktor","polynom"]},
 	{"kurs":"TMA970","fil_namn":"binomialsatsen","sats":"Binomialsatsen","paa_listan":true,"nyckelord":["binomial","kombinatorik","induktion"]},
 	{"kurs":"TMA970","fil_namn":"rollessats","sats":"Rolles sats","paa_listan":true,"nyckelord":["rolle","extremvärden","derivator"]},

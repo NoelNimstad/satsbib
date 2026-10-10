@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pascals identitet</title>
+	<link rel="stylesheet" href="../../../res/styles.css"/>
+	<script src="../../../res/db.js" defer></script>
+	<script src="../../../res/sats.js" defer></script>
+	<!-- Externa resurser -->
+	<link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="../../../index.html">Hem</a>
+			<button id="soek-knapp">Sök</button>
+		</nav>
+		<h1>Pascals identitet</h1>
+	</header>
+	<main>
+		<section>
+			<h3>Formulering</h3>
+			<p>
+				Pascals identitet relaterar en summa av binomialkoefficienter enligt:
+				$$
+					{n\choose k}+{n\choose k-1}\equiv{n+1\choose k}
+				$$
+			</p>
+		</section>
+		<section>
+			<h3>Bevis</h3>
+			<p>
+				Vi använder ett direktbevis:
+				$$
+				\begin{align*}
+					{n\choose k}+{n\choose k-1}
+					&=\frac{n!}{(n-k)!k!}+\frac{n!}{(n-[k-1])!(k-1)!}\\
+					&=\frac{n!}{(n-k)!k!}+\frac{n!}{(n-k+1)!(k-1)!}\\
+					&=\frac{n!(n-k+1)}{(n-k+1)!k!}+\frac{n!k}{(n-k+1)!k!}\\
+					&=\frac{n!(n-k+1)+n!k}{(n-k+1)!k!}\\
+					&=\frac{n!(n-k+1+k)}{(n-k+1)!k!}\\
+					&=\frac{n!(n+1)}{([n+1]-k)!k!}\\
+					&=\frac{(n+1)!}{([n+1]-k)!k!}={n+1\choose k}
+				\end{align*}
+				$$
+			</p>
+			<div class="qed"></div>
+		</section>
+	</main>
+</body>
+</html>
