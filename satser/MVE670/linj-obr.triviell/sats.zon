@@ -1,0 +1,10 @@
+.{
+    .namn = "Villkor för linjärt oberoende vektorer",
+    .paa_listan = true,
+    .nyckelord = .{
+        "linjärt oberoende",
+        "vektorer",
+        "linjära kombinationer",
+        "triviell lösning",
+    },
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villkor för linjärt oberoende vektorer</title>
+    <link rel="stylesheet" href="../../../res/styles.css"/>
+    <script src="../../../res/db.js" defer></script>
+    <script src="../../../res/sats.js" defer></script>
+    <!-- Externa resurser -->
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../../../index.html">Hem</a>
+            <button id="soek-knapp">Sök</button>
+        </nav>
+        <h1>Villkor för linjärt oberoende vektorer</h1>
+    </header>
+    <main>
+        <section>
+            <h3>Formulering</h3>
+            <p>
+                Vektorerna \( \vec{v}_1,\dots,\vec{v}_n \) är linjärt oberoende \( \iff \) den enda lösningen till ekvationen
+                $$
+                    \sum_{k=1}^n\lambda_k\vec{v}_k=\vec{0}
+                $$
+                är den triviella lösningen \( \lambda_1=\dots=\lambda_n=0 \).
+            </p>
+        </section>
+        <section>
+            <h3>Bevis</h3>
+            <p>
+                (\( \implies \)) Antag att \( \vec{v}_1,\dots,\vec{v}_n \) är linjärt oberoende vektorer. Vi vill visa att den enda lösningen till ekvationen är den triviella. Genom motsägelse antar vi att det finns en icke-triviell lösning, det vill säga att minst ett \( \lambda_k \neq 0 \). Vi antar utan inskränkning att \( \lambda_1 \neq 0 \). Då har vi att:
+                $$
+                \begin{align*}
+                    \lambda_1\vec{v}_1+\sum_{k=2}^n\lambda_k\vec{v}_k&=\vec{0}\\
+                    \iff \lambda_1\vec{v}_1&=\sum_{k=2}^n-\lambda_k\vec{v}_k\\
+                    \stackrel{\lambda_1\neq0}{\iff}\vec{v}_1&=\sum_{k=2}^n\frac{-\lambda_k}{\lambda_1}\vec{v}_k\\
+                    &=\sum_{k=2}^n\mu_k\vec{v}_k
+                \end{align*}
+                $$
+                Detta innebär att \( \vec{v}_1 \) kan skrivas som en linjär kombination av de övriga vektorerna, vilket motsäger att vektorerna är linjärt oberoende. Alltså måste antagandet om en icke-triviell lösning vara falskt.
+            </p>
+            <p>
+                (\( \impliedby \)) Antag att den enda lösningen till ekvationen
+                $$
+                    \sum_{k=1}^n\lambda_k\vec{v}_k=\vec{0}
+                $$
+                är den triviella lösningen \( \lambda_1=\dots=\lambda_n=0 \). För att visa att vektorerna är linjärt oberoende antar vi motsatsen, nämligen att någon vektor \( \vec{v}_k \) (låt säga \( \vec{v}_1 \)) är en linjär kombination av de andra. Då gäller att:
+                $$
+                \begin{align*}
+                    \mu_1\vec{v}_1&=-\mu_2\vec{v}_2-\dots-\mu_n\vec{v}_n\\
+                    \iff\mu_1\vec{v}_1+\mu_2\vec{v}_2+\dots+\mu_n\vec{v}_n&=\vec{0}
+                \end{align*}
+                $$
+                där vi kan välja \( \mu_1 = 1 \) (alltså är inte alla koefficienter noll). Detta ger en icke-triviell lösning till ekvationen, vilket motsäger vårt antagande. Alltså är vektorerna linjärt oberoende.
+            </p>
+            <div class="qed"></div>
+        </section>
+    </main>
+</body>
+</html>
