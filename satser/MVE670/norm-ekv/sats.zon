@@ -1,0 +1,9 @@
+.{
+    .namn = "Normalekvationens minimeringsegenskap",
+    .paa_listan = true,
+    .nyckelord = .{
+        "ekvation",
+        "derivering",
+        "optimisering",
+    },
+}

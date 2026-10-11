@@ -6,5 +6,6 @@ const db = [
 	{"kurs":"TMA970","fil_namn":"binomialsatsen","sats":"Binomialsatsen","paa_listan":true,"nyckelord":["binomial","kombinatorik","induktion"]},
 	{"kurs":"TMA970","fil_namn":"rollessats","sats":"Rolles sats","paa_listan":true,"nyckelord":["rolle","extremvärden","derivator"]},
 	{"kurs":"TMA970","fil_namn":"lagranges_m-v-s.","sats":"Lagranges medelvärdessats","paa_listan":true,"nyckelord":["lagrange","medelvärden","derivator"]},
-	{"kurs":"TMA970","fil_namn":"weierstrasssats","sats":"Weierstrass sats","paa_listan":false,"nyckelord":["weierstrass","extremvärden","kontinuerliga funktioner"]}
+	{"kurs":"TMA970","fil_namn":"weierstrasssats","sats":"Weierstrass sats","paa_listan":false,"nyckelord":["weierstrass","extremvärden","kontinuerliga funktioner"]},
+	{"kurs":"MVE670","fil_namn":"norm-ekv","sats":"Normalekvationens minimeringsegenskap","paa_listan":true,"nyckelord":["ekvation","derivering","optimisering"]}
 ];
