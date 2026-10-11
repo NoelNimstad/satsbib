@@ -31,7 +31,7 @@
 - [ ] Definition och geometrisk tolkning av skalär trippelprodukt, Definition 3, s 85 och Sats 2, s 86 (Föreläsning 6). 
 - [ ] Associativa lagen för matrisprodukt Sats 1(iv), (rad 1), s 121 (Föreläsning 10).
 - [ ] Entydighet av invers, Lemma 2, s 129 (Föreläsning 12).
-- [ ] Minsta kvadratmetoden, s 155-156, se även Proposition 1 här (Föreläsning 14).
+- [x] Minsta kvadratmetoden, s 155-156, se även Proposition 1 här (Föreläsning 14).
 - [ ] Sats 1, s 166 (Föreläsning 15).
 - [ ] Determinantens definition, Definition 4, s 224 (Föreläsning 17).
 - [ ] Sats 3, s 255 (Föreläsning 23).

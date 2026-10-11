@@ -1,5 +1,5 @@
 .{
-    .namn = "Normalekvationens minimeringsegenskap",
+    .namn = "Normalekvationens minimering",
     .paa_listan = true,
     .nyckelord = .{
         "ekvation",

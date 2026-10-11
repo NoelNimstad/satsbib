@@ -1,74 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sv">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Normalekvationens minimeringsegenskap</title>
-	<link rel="stylesheet" href="../../../res/styles.css"/>
-	<script src="../../../res/db.js" defer></script>
-	<script src="../../../res/sats.js" defer></script>
-	<!-- Externa resurser -->
-	<link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
-	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
-</head>
-<body>
-	<header>
-		<nav>
-			<a href="../../../index.html">Hem</a>
-			<button id="soek-knapp">Sök</button>
-		</nav>
-		<h1>Normalekvationens minimeringsegenskap</h1>
-	</header>
-	<main>
-		<section>
-			<h3>Formulering</h3>
-			<aside>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Normalekvationens minimering</title>
+		<link rel="stylesheet" href="../../../res/styles.css" />
+		<script src="../../../res/db.js" defer></script>
+		<script src="../../../res/sats.js" defer></script>
+		<!-- Externa resurser -->
+		<link rel="stylesheet" href="https://cdn.simplecss.org/simple.css" />
+		<script
+			id="MathJax-script"
+			async
+			src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"
+		></script>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a href="../../../index.html">Hem</a>
+				<button id="soek-knapp">Sök</button>
+			</nav>
+			<h1>Normalekvationens minimering</h1>
+		</header>
+		<main>
+			<section>
+				<h3>Formulering</h3>
 				<p>
-					<b>Alternativ formulering</b>
+					Om \( \vec{c} \) är en lösning till normalekvationen \(
+					\mathbf{A}^\top\mathbf{A}\vec{c}=\mathbf{A}^\top\vec{b} \), då gäller
+					att \( \vec{c} \) är den vektor som uppfyller
+					$$
+						\min_\vec{v}\lVert\mathbf{A}\vec{v}-\vec{b}\rVert=\min_\vec{v}\lVert\mathbf{A}\vec{v}-\vec{b}\rVert^2.
+					$$
+				</p>
+			</section>
+			<section>
+				<h3>Bevis</h3>
+				<!-- <aside>
+					<p>
+						<b>Varför typ \( n\times 2 \)?</b>
+					</p>
+					<p>
+						För att ge en förenklad bild av beviset. Att bevisa för andra matristyper är analogt.
+					</p>
+				</aside> -->
+				<p>
+					Låt \( \vec{v} \) vara en godtycklig vektor. Vi vill visa att avståndet minimeras när \( \vec{c} \) uppfyller normalekvationen, det vill säga att \( \mathbf{A}^\top(\mathbf{A}\vec{c}-\vec{b})=\vec{0} \).
 				</p>
 				<p>
-					\( \vec{c} \) kan namnenligt sägas lösa \( \min_\vec{v}\lVert\mathbf{A}\vec{v}-\vec{b}\rVert^2 \)
-				</p>
-			</aside>
-			<p>
-				Om \( \vec{c} \) är en lösning till normalekvationen \( \mathbf{A}^\top\mathbf{A}\vec{c}=\mathbf{A}^\top\vec{b} \), då gäller att \( \vec{c} \) är den vektor som uppfyller
-				$$
-					\min_\vec{v}\lVert\mathbf{A}\vec{v}-\vec{b}\rVert.
-				$$
-			</p>
-		</section>
-		<section>
-			<h3>Bevis</h3>
-			<!-- <aside>
-				<p>
-					<b>Varför typ \( n\times 2 \)?</b>
+					Vi betecknar kvadraten på avståndet för vektorn \( \vec{v} \):
+					$$
+					\begin{align*}
+						\lVert\mathbf{A}\vec{v}-\vec{b}\rVert^2
+						&=\lVert\mathbf{A}(\vec{v}-\vec{c})+(\mathbf{A}\vec{c}-\vec{b})\rVert^2\\
+						&=[\mathbf{A}(\vec{v}-\vec{c})+(\mathbf{A}\vec{c}-\vec{b})]\cdot[\mathbf{A}(\vec{v}-\vec{c})+(\mathbf{A}\vec{c}-\vec{b})]\\
+						&=\lVert\mathbf{A}(\vec{v}-\vec{c})\rVert^2+\lVert\mathbf{A}\vec{c}-\vec{b}\rVert^2+2\underbrace{[\mathbf{A}(\vec{v}-\vec{c})]\cdot(\mathbf{A}\vec{c}-\vec{b})}_{[\mathbf{A}(\vec{v}-\vec{c})]^\top(\mathbf{A}\vec{c}-\vec{b})}
+					\end{align*}
+					$$
 				</p>
 				<p>
-					För att ge en förenklad bild av beviset. Att bevisa för andra matristyper är analogt.
+					Eftersom \( \vec{c} \) uppfyller normalekvationen vet vi att
+					\( \mathbf{A}^\top(\mathbf{A}\vec{c}-\vec{b})=\vec{0} \), vilket innebär att \( \mathbf{A}\vec{c}-\vec{b} \) är en vektor vinkelrät mot kolonnrummet \( \operatorname{Kol}\mathbf{A} \). Den sista termens skalärprodukt blir därför noll då \( \mathbf{A}(\vec{v}-\vec{c})\in\operatorname{Kol}\mathbf{A} \):
+					$$
+						[\mathbf{A}(\vec{v}-\vec{c})]^\top(\mathbf{A}\vec{c}-\vec{b})=0
+					$$
 				</p>
-			</aside> -->
-			<p>
-				Låt \( \mathbf{A}=(\vec{a}_1,\dots,\vec{a}_m) \) typ \( n\times m \). Låt sedan \( V=\operatorname{Koll}\mathbf{A}\subsetneq\mathbb{R}^n \). Antag slutligen att \( \vec{b}\not\in V \), då en triviell lösning finns.
-			</p>
-			<p>
-				Notera att vektorn \( \mathbf{A}\vec{c}\in V \). Alltså, om sträckan \( \vec{b} \) till \( \mathbf{A}\vec{c} \) (vilket ges av \( \mathbf{A}\vec{c}-\vec{b} \)) ska minimeras, så gäller att den måste vara vinkelrät mot \( V \). Då krävs att \( \mathbf{A}\vec{c}-\vec{b}\perp \vec{a}_1,\dots,\vec{a}_m \), då dessa spänner upp \( V \). Vi kan sammanfatta detta resultat som:
-				$$
-				\begin{align*}
-				\vec{0}&=\begin{pmatrix}
-				\vec{a}_1\cdot(\mathbf{A}\vec{c}-\vec{b})\\
-				\vdots\\
-				\vec{a}_m\cdot(\mathbf{A}\vec{c}-\vec{b})
-				\end{pmatrix}\\
-				&=\mathbf{A}^\top(\mathbf{A}\vec{c}-\vec{b})
-				\end{align*}
-				$$
-				Då följer alltså att:
-				$$
-					\mathbf{A}^\top\mathbf{A}\vec{c}-\mathbf{A}^\top\vec{b}=\vec{0}\iff\mathbf{A}^\top\mathbf{A}\vec{c}=\mathbf{A}^\top\vec{b}
-				$$
-			</p>
-			<div class="qed"></div>
-		</section>
-	</main>
-</body>
+				<p>
+					Då följer att:
+					$$
+						\lVert\mathbf{A}\vec{v}-\vec{b}\rVert^2=\lVert\mathbf{A}(\vec{v}-\vec{c})\rVert^2+\lVert\mathbf{A}\vec{c}-\vec{b}\rVert^2\geq\lVert\mathbf{A}\vec{c}-\vec{b}\rVert^2 
+					$$
+					Eftersom \( \lVert\mathbf{A}(\vec{v}-\vec{c})\rVert^2\geq0 \) följer att \( \vec{c} \) minimerar uttrycket.
+				</p>
+				<div class="qed"></div>
+			</section>
+		</main>
+	</body>
 </html>
