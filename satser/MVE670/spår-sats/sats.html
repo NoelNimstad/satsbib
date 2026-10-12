@@ -50,21 +50,21 @@
 				$$
 				Å andra sidan kan man visa att:
 				$$
-					p_\mathbf{A}(\lambda)=\lambda^n-\lambda^{n-1}\sum_{j=1}^na_{jj}+\dots+(-1)^n\det\mathbf{A}
+					p_\mathbf{A}(\lambda)=\lambda^n-\lambda^{n-1}\underbrace{\sum_{j=1}^na_{jj}}_{\operatorname{spår}\mathbf{A}}+\dots+(-1)^n\det\mathbf{A}
 				$$
 			</p>
 			<p>
-				Låt oss visa det andra uttrycket. Att konstanten i uttrycket är \( (-1)^n\det\mathbf{A} \) ges genom att låta \( \lambda=0 \) i \( p_\mathbf{A}(\lambda) \). Vi får då:
+				Låt oss härleda det andra uttrycket (det vill säga, den ovan). Att konstanten i uttrycket är \( (-1)^n\det\mathbf{A} \) ges genom att låta \( \lambda=0 \) i \( p_\mathbf{A}(\lambda) \). Vi får då:
 				$$
 					p_\mathbf{A}(0)=\det(\mathbf{0}-\mathbf{A})=\det(-\mathbf{A})=(-1)^n\det\mathbf{A}
 				$$
-				Alltså ser vi genom att jämföra uttrycken att:
+				Alltså ser vi genom att jämföra de två uttrycken för \( p_\mathbf{A}(\lambda) \) att:
 				$$
 					\therefore\det\mathbf{A}=\prod_{j=1}^n\lambda_j
 				$$
 			</p>
 			<p>
-				Att koefficienten för \( \lambda^{n-1} \) är \( \operatorname{spår}\mathbf{A} \) visas genom induktion. För \( n=2 \) gäller att:
+				Att koefficienten för \( \lambda^{n-1} \) är \( \operatorname{spår}\mathbf{A} \) visas genom induktion. För \( n=2 \) (basfallet) gäller att:
 				$$
 				\begin{align*}
 					p_\mathbf{A}(\lambda)
@@ -76,11 +76,11 @@
 					&=\lambda^2-(a_{11}+a_{22})\lambda+\dots
 				\end{align*}
 				$$
-				Alltså gäller påståendet för \( n=2 \). Antag nu att för \( \mathbf{A} \) typ \( p\times p \) gäller att:
+				Alltså gäller påståendet för \( n=2 \) då \( \operatorname{spår}\mathbf{A}=a_{11}+a_{22} \). Antag nu att för \( \mathbf{A} \) typ \( p\times p \) (induktionsantagandet \( \text{IA} \)) gäller att:
 				$$
 					p_\mathbf{A}(\lambda)=\lambda^p-(a_{11}+\dots+a_{pp})\lambda^{p-1}+\dots
 				$$
-				Vi vill visa då att det följer att påståendet är sant för \( n=p+1 \). Antag \( \mathbf{A} \) typ \( (p+1)\times(p+1) \). Då:
+				Vi vill visa att det då följer att påståendet är sant för \( n=p+1 \). Antag \( \mathbf{A} \) typ \( (p+1)\times(p+1) \). Då:
 				$$
 					p_\mathbf{A}(\lambda)
 					=\det(\lambda\mathbf{E}-\mathbf{A})
@@ -92,7 +92,7 @@
 						*&&&&\lambda-a_{(p+1)(p+1)}
 					\end{vmatrix}
 				$$
-				Låt oss kofaktoruteckla längs rad \( p+1 \):
+				Låt oss kofaktoruteckla längs rad \( p+1 \), notera även hur då termer utanför diagonalen ej inehåller \( \lambda \), och är där med icke-relevanta för beviset och skrivs in i "\( \dots \):et" (det här är varför endast \( \lambda-a_{(p+1)(p+1)}  \) termen "överlever"):
 				$$
 				\begin{align*}
 					p_\mathbf{A}(\lambda)
@@ -101,7 +101,7 @@
 						&\ddots&\\
 						*&&\lambda-a_{pp}
 					\end{vmatrix}+\dots\\
-					&\stackrel{\text{IA}}{=}(-1)^{2p+2}(\lambda-a_{(p+1)(p+1)})\left(\lambda^p-(a_{11}+\dots+a_{pp})\lambda^{p-1}+\dots\right)\\
+					&\stackrel{\text{IA}}{=}\overbrace{(-1)^{2p+2}}^{=1}(\lambda-a_{(p+1)(p+1)})\left(\lambda^p-(a_{11}+\dots+a_{pp})\lambda^{p-1}+\dots\right)\\
 					&=\lambda^{p+1}-(a_{11}+\dots+a_{pp})\lambda^p-a_{(p+1)(p+1)}\lambda^p+\dots\\
 					&=\lambda^{p+1}-(a_{11}+\dots+a_{pp}+a_{(p+1)(p+1)})\lambda^p+\dots\\
 					&=\lambda^{p+1}-(\operatorname{spår}\mathbf{A})\lambda^p+\dots
