@@ -1,5 +1,5 @@
 .{
-    .namn = "Spår- och egenvärdessatsen",
+    .namn = "Egenvärden och spår/determinanter",
     .paa_listan = true,
     .nyckelord = .{
         "spår",
