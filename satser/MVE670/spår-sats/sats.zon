@@ -1,0 +1,9 @@
+.{
+    .namn = "Spår- och egenvärdessatsen",
+    .paa_listan = true,
+    .nyckelord = .{
+        "spår",
+        "egenvärden",
+        "matriser",
+    },
+}

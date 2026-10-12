@@ -1,0 +1,10 @@
+.{
+    .namn = "Spektralsatsen",
+    .paa_listan = true,
+    .nyckelord = .{
+        "inverterbar",
+        "matriser",
+        "ortogonal",
+        "symmetrisk",
+    },
+}

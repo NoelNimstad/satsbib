@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Spår- och egenvärdessatsen</title>
+	<link rel="stylesheet" href="../../../res/styles.css"/>
+	<script src="../../../res/db.js" defer></script>
+	<script src="../../../res/sats.js" defer></script>
+	<!-- Externa resurser -->
+	<link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="../../../index.html">Hem</a>
+			<button id="soek-knapp">Sök</button>
+		</nav>
+		<h1>Spår- och egenvärdessatsen</h1>
+	</header>
+	<main>
+		<section>
+			<h3>Formulering</h3>
+			<p>
+				Antag \( \mathbf{A} \) typ \( n\times n \) har egenvärden \( \lambda_1,\dots,\lambda_n \). Då gäller att:
+				$$
+				\begin{align*}
+					&\operatorname{spår}\mathbf{A}=\sum_{j=1}^n\lambda_j\\
+					&\det\mathbf{A}=\prod_{j=1}^n\lambda_j
+				\end{align*}
+				$$
+			</p>
+		</section>
+		<section>
+			<h3>Bevis</h3>
+			<p>
+				Beviset bygger på att vi kan skriva \( p_\mathbf{A}(\lambda) \)
+				på två olika sätt. Å ena sidan har vi:
+				$$
+					p_\mathbf{A}(\lambda)=\det(\lambda\mathbf{E}-\mathbf{A})
+				$$
+				där \( \operatorname{grad}p_\mathbf{A}=n \) med koefficient \( 1 \) till \( \lambda^n \). <a class="sats">Faktorsatsen</a> ger då att:
+				$$
+				\begin{align*}
+					p_\mathbf{A}(\lambda)
+					&=\prod_{j=1}^n(\lambda-\lambda_j)\\
+					&=\lambda^n-\lambda^{n-1}\sum_{j=1}^n\lambda_j+\dots+(-1)^n\prod_{j=1}^n\lambda_j
+				\end{align*}
+				$$
+				Å andra sidan kan man visa att:
+				$$
+					p_\mathbf{A}(\lambda)=\lambda^n-\lambda^{n-1}\sum_{j=1}^na_{jj}+\dots+(-1)^n\det\mathbf{A}
+				$$
+			</p>
+			<p>
+				Låt oss visa det andra uttrycket. Att konstanten i uttrycket är \( (-1)^n\det\mathbf{A} \) ges genom att låta \( \lambda=0 \) i \( p_\mathbf{A}(\lambda) \). Vi får då:
+				$$
+					p_\mathbf{A}(0)=\det(\mathbf{0}-\mathbf{A})=\det(-\mathbf{A})=(-1)^n\det\mathbf{A}
+				$$
+				Alltså ser vi genom att jämföra uttrycken att:
+				$$
+					\therefore\det\mathbf{A}=\prod_{j=1}^n\lambda_j
+				$$
+			</p>
+			<p>
+				Att koefficienten för \( \lambda^{n-1} \) är \( \operatorname{spår}\mathbf{A} \) visas genom induktion. För \( n=2 \) gäller att:
+				$$
+				\begin{align*}
+					p_\mathbf{A}(\lambda)
+					&=\begin{vmatrix}
+						\lambda-a_{11}&-a_{12}\\
+						-a_{21}&\lambda-a_{22}\\
+					\end{vmatrix}\\
+					&=\lambda^2-a_{11}\lambda-a_{22}\lambda+\dots\\
+					&=\lambda^2-(a_{11}+a_{22})\lambda+\dots
+				\end{align*}
+				$$
+				Alltså gäller påståendet för \( n=2 \). Antag nu att för \( \mathbf{A} \) typ \( p\times p \) gäller att:
+				$$
+					p_\mathbf{A}(\lambda)=\lambda^p-(a_{11}+\dots+a_{pp})\lambda^{p-1}+\dots
+				$$
+				Vi vill visa då att det följer att påståendet är sant för \( n=p+1 \). Antag \( \mathbf{A} \) typ \( (p+1)\times(p+1) \). Då:
+				$$
+					p_\mathbf{A}(\lambda)
+					=\det(\lambda\mathbf{E}-\mathbf{A})
+					=\begin{vmatrix}
+						\lambda-a_{11}&&&&*\\
+						&\lambda-a_{22}&&&\\
+						&&\ddots&&\\
+						&&&\lambda-a_{pp}&\\
+						*&&&&\lambda-a_{(p+1)(p+1)}
+					\end{vmatrix}
+				$$
+				Låt oss kofaktoruteckla längs rad \( p+1 \):
+				$$
+				\begin{align*}
+					p_\mathbf{A}(\lambda)
+					&=(-1)^{(p+1)+(p+1)}(\lambda-a_{(p+1)(p+1)})\begin{vmatrix}
+						\lambda-a_{11}&&*\\
+						&\ddots&\\
+						*&&\lambda-a_{pp}
+					\end{vmatrix}+\dots\\
+					&\stackrel{\text{IA}}{=}(-1)^{2p+2}(\lambda-a_{(p+1)(p+1)})\left(\lambda^p-(a_{11}+\dots+a_{pp})\lambda^{p-1}+\dots\right)\\
+					&=\lambda^{p+1}-(a_{11}+\dots+a_{pp})\lambda^p-a_{(p+1)(p+1)}\lambda^p+\dots\\
+					&=\lambda^{p+1}-(a_{11}+\dots+a_{pp}+a_{(p+1)(p+1)})\lambda^p+\dots\\
+					&=\lambda^{p+1}-(\operatorname{spår}\mathbf{A})\lambda^p+\dots
+				\end{align*}
+				$$
+				Eftersom basfallet är sant, och att påståendet är sant för \( n=p \) medför att påståendet är sant för \( n=p+1 \), ger enligt induktionsaxiomet att påståendet är sant för alla giltiga \( n \). Alltså får vi att:
+				$$
+					\therefore\operatorname{spår}\mathbf{A}=\sum_{j=1}^n\lambda_j
+				$$
+				Sammanfattningsvis:
+				$$
+				\begin{align*}
+					&\det\mathbf{A}=\prod_{j=1}^n\lambda_j\\
+					&\operatorname{spår}\mathbf{A}=\sum_{j=1}^n\lambda_j
+				\end{align*}
+				$$
+			</p>
+			<div class="qed"></div>
+		</section>
+	</main>
+</body>
+</html>

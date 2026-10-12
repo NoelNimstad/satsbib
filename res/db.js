@@ -11,6 +11,8 @@ const db = [
 	{"kurs":"TMA970","fil_namn":"weierstrasssats","sats":"Weierstrass sats","paa_listan":false,"nyckelord":["weierstrass","extremvärden","kontinuerliga funktioner"]},
 	{"kurs":"TMA970","fil_namn":"derivators-linearitet","sats":"Derivatans linearitet","paa_listan":false,"nyckelord":["linearitet","derivator"]},
 	{"kurs":"MVE670","fil_namn":"norm-ekv","sats":"Normalekvationens minimering","paa_listan":true,"nyckelord":["ekvation","derivering","optimisering"]},
+	{"kurs":"MVE670","fil_namn":"spektralsatsen","sats":"Spektralsatsen","paa_listan":true,"nyckelord":["inverterbar","matriser","ortogonal","symmetrisk"]},
+	{"kurs":"MVE670","fil_namn":"spår-sats","sats":"Spår- och egenvärdessatsen","paa_listan":true,"nyckelord":["spår","egenvärden","matriser"]},
 	{"kurs":"MVE670","fil_namn":"vektorer-p-linjen","sats":"Lemmat om vektorer på linjer","paa_listan":true,"nyckelord":["linjer","vektorer","lemma"]},
 	{"kurs":"MVE670","fil_namn":"linj-obr.triviell","sats":"Villkor för linjärt oberoende vektorer","paa_listan":true,"nyckelord":["linjärt oberoende","vektorer","linjära kombinationer","triviell lösning"]}
 ];

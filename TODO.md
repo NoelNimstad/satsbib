@@ -36,6 +36,6 @@
 - [ ] Determinantens definition, Definition 4, s 224 (Föreläsning 17).
 - [ ] Sats 3, s 255 (Föreläsning 23).
 - [ ] Lemma 2, s 256 (Föreläsning 24).
-- [ ] Sats 7, s 260 (Föreläsning 25).
+- [x] Sats 7, s 260 (Föreläsning 25).
 - [ ] Definition av vektorrum, [H] Definition 1.1, s 2 (Föreläsning 26).
 - [ ] Definition av skalärprodukt och inre produktrum, [H] Definition 2.1, s 28 (Föreläsning 28).
