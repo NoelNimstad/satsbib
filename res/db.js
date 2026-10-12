@@ -1,12 +1,16 @@
 const db = [
 	{"kurs":"TMA970","fil_namn":"fermatssats","sats":"Fermats sats","paa_listan":true,"nyckelord":["fermat","extremvärden"]},
 	{"kurs":"TMA970","fil_namn":"m-l-v.-satsen","sats":"Satsen om mellanliggande värden","paa_listan":false,"nyckelord":["mellanliggande värden","kontinuerliga funktioner"]},
+	{"kurs":"TMA970","fil_namn":"kont-och-primitiva","sats":"Kontinuitet och primitiva funktioner","paa_listan":false,"nyckelord":["primitiva funktioner","kontinuerliga funktioner","existens"]},
+	{"kurs":"TMA970","fil_namn":"integralens-linearitet","sats":"Integralens linearitet","paa_listan":false,"nyckelord":["linearitet","integraler"]},
 	{"kurs":"TMA970","fil_namn":"pascals_identitet","sats":"Pascals identitet","paa_listan":false,"nyckelord":["identitet","pascal","kombinatorik"]},
 	{"kurs":"TMA970","fil_namn":"faktorsatsen","sats":"Faktorsatsen","paa_listan":true,"nyckelord":["faktor","polynom"]},
 	{"kurs":"TMA970","fil_namn":"binomialsatsen","sats":"Binomialsatsen","paa_listan":true,"nyckelord":["binomial","kombinatorik","induktion"]},
-	{"kurs":"TMA970","fil_namn":"rollessats","sats":"Rolles sats","paa_listan":true,"nyckelord":["rolle","extremvärden","derivator"]},
-	{"kurs":"TMA970","fil_namn":"lagranges_m-v-s.","sats":"Lagranges medelvärdessats","paa_listan":true,"nyckelord":["lagrange","medelvärden","derivator"]},
+	{"kurs":"TMA970","fil_namn":"rollessats","sats":"Rolles sats","paa_listan":true,"nyckelord":["rolle","extremvärden","derivator","existens"]},
+	{"kurs":"TMA970","fil_namn":"lagranges_m-v-s.","sats":"Lagranges medelvärdessats","paa_listan":true,"nyckelord":["lagrange","medelvärden","derivator","existens"]},
 	{"kurs":"TMA970","fil_namn":"weierstrasssats","sats":"Weierstrass sats","paa_listan":false,"nyckelord":["weierstrass","extremvärden","kontinuerliga funktioner"]},
+	{"kurs":"TMA970","fil_namn":"derivators-linearitet","sats":"Derivatans linearitet","paa_listan":false,"nyckelord":["linearitet","derivator"]},
 	{"kurs":"MVE670","fil_namn":"norm-ekv","sats":"Normalekvationens minimering","paa_listan":true,"nyckelord":["ekvation","derivering","optimisering"]},
+	{"kurs":"MVE670","fil_namn":"vektorer-p-linjen","sats":"Lemmat om vektorer på linjer","paa_listan":true,"nyckelord":["linjer","vektorer","lemma"]},
 	{"kurs":"MVE670","fil_namn":"linj-obr.triviell","sats":"Villkor för linjärt oberoende vektorer","paa_listan":true,"nyckelord":["linjärt oberoende","vektorer","linjära kombinationer","triviell lösning"]}
 ];

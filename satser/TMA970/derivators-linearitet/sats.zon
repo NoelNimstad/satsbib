@@ -1,0 +1,8 @@
+.{
+    .namn = "Derivatans linearitet",
+    .paa_listan = false,
+    .nyckelord = .{
+        "linearitet",
+        "derivator",
+    },
+}

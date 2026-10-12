@@ -1,0 +1,9 @@
+.{
+    .namn = "Kontinuitet och primitiva funktioner",
+    .paa_listan = false,
+    .nyckelord = .{
+        "primitiva funktioner",
+        "kontinuerliga funktioner",
+        "existens",
+    },
+}

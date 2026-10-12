@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Derivatans linearitet</title>
+	<link rel="stylesheet" href="../../../res/styles.css"/>
+	<script src="../../../res/db.js" defer></script>
+	<script src="../../../res/sats.js" defer></script>
+	<!-- Externa resurser -->
+	<link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="../../../index.html">Hem</a>
+			<button id="soek-knapp">Sök</button>
+		</nav>
+		<h1>Derivatans linearitet</h1>
+	</header>
+	<main>
+		<section>
+			<h3>Formulering</h3>
+			<p>
+				Derivatan är en linjär operation. Det vill säga, vi har att:
+			</p>
+			<ol>
+				<li>
+					$$
+						(f+g)'(x)=f'(x)+g'(x)
+					$$
+				</li>
+				<li>
+					$$
+						\left(\lambda f(x)\right)'=\lambda f'(x)
+					$$
+				</li>
+			</ol>
+		</section>
+		<section>
+			<h3>Bevis</h3>
+			<p>
+				Låt \( k:x\mapsto af(x)+bg(x) \). Vi vill visa att:
+				$$
+					k'(x)=\left(af(x)+bg(x)\right)'=af'(x)+bg'(x)
+				$$
+			</p>
+			<p>
+				Vi använder ett direkt bevis.
+				$$
+				\begin{align*}
+					k'(x)
+					&=\lim_{h\to0}\frac{k(x+h)-k(x)}{h}\\
+					&=\lim_{h\to0}\frac{af(x+h)+bg(x+h)-af(x)-bg(x)}{h}\\
+					&=\lim_{h\to0}\frac{af(x+h)-af(x)+bg(x+h)-bg(x)}{h}\\
+					&=\lim_{h\to0}\left(a\frac{f(x+h)-f(x)}{h}+b\frac{g(x+h)-g(x)}{h}\right)\\
+				\end{align*}
+				$$
+				För att använda räknereglerna av gränsvärden måste vi visa att individuella gränsvärdena existerar. För att varje del av summan ska existera, måste individuella termena existera. Dessa är en konstant gånger en funktion, och då måste funktionen ha ett gränsvärde. Dessa gränsvärden existerar då de är definitionen av en derivata, som vi antar existerar. Alltså får vi:
+				$$
+				\begin{align*}
+					k'(x)
+					&=\lim_{h\to0}a\frac{f(x+h)-f(x)}{h}+\lim_{h\to0}b\frac{g(x+h)-g(x)}{h}\\
+					&=a\lim_{h\to0}\frac{f(x+h)-f(x)}{h}+b\lim_{h\to0}\frac{g(x+h)-g(x)}{h}\\
+					&=af'(x)+bg'(x)
+				\end{align*}
+				$$
+			</p>
+			<div class="qed"></div>
+		</section>
+	</main>
+</body>
+</html>

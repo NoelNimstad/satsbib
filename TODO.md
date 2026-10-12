@@ -22,7 +22,7 @@
 - [ ] Jämförelsesatsen
 
 # MVE670
-- [ ] Definition av linjärt beroende / linjärt oberoende, Definition 4, s 33, och Sats 5, s 36 (dimension 2, 3) (Föreläsning 3) samt Definition 3 och Sats 2, s 100 (dimension n) (Föreläsning 9).
+- [x] Definition av linjärt beroende / linjärt oberoende, Definition 4, s 33, och Sats 5, s 36 (dimension 2, 3) (Föreläsning 3) samt Definition 3 och Sats 2, s 100 (dimension n) (Föreläsning 9).
 - [ ] "Bassatsen": Sats 4 s 34-35, Kapitel 2.3 (dim 2 och 3), Sats 3, s 103 (dim n) se även härDownload här (Föreläsning 9). 
 - [ ] Lemma 1, s 28 (dim 1), Sats 2, s 29 (dim 2), Sats 3 s 30 (dim 3), se även här (Föreläsning 4).
 - [ ] Definition av skalärprodukt av geometriska vektorer, Definition 1, s 63 (Föreläsning 5). 

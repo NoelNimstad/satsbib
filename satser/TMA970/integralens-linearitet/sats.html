@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Integralens linearitet</title>
+	<link rel="stylesheet" href="../../../res/styles.css"/>
+	<script src="../../../res/db.js" defer></script>
+	<script src="../../../res/sats.js" defer></script>
+	<!-- Externa resurser -->
+	<link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="../../../index.html">Hem</a>
+			<button id="soek-knapp">Sök</button>
+		</nav>
+		<h1>Integralens linearitet</h1>
+	</header>
+	<main>
+		<section>
+			<h3>Formulering</h3>
+			<p>
+				Integralen är en linjär operation. Det vill säga, vi har att:
+			</p>
+			<ol>
+				<li>
+					$$
+						\int(f+g)(x)\,\mathrm{d}x=\int f(x)\,\mathrm{d}x+\int g(x)\,\mathrm{d}x
+					$$
+				</li>
+				<li>
+					$$
+						\int\lambda f(x)\,\mathrm{d}x=\lambda\int f(x)\,\mathrm{d}x
+					$$
+				</li>
+			</ol>
+		</section>
+		<section>
+			<h3>Bevis</h3>
+			<p>
+				För 1., har vi att vänster ledet ger:
+				$$
+					\left(\int(f+g)(x)\,\mathrm{d}x\right)'=\left(\int f(x)+g(x)\,\mathrm{d}x\right)'=f(x)+g(x)
+				$$
+				och höger ledet ger:
+				$$
+					\left(\int f(x)\,\mathrm{d}x+\int g(x)\,\mathrm{d}x\right)'=\left(\int f(x)\,\mathrm{d}x\right)'+\left(\int g(x)\,\mathrm{d}x\right)'=f(x)+g(x)
+				$$
+				Alltså har vi att \( \frac{\mathrm{d}}{\mathrm{d}x}(\text{VL})=\frac{\mathrm{d}}{\mathrm{d}x}(\text{HL})\implies\text{VL} \) och \( \text{HL} \) är desamma sånär som på en additiv konstant.
+			</p>
+			<p>
+				För 2., har vi att vänster ledet ger:
+				$$
+					\left(\int\lambda f(x)\,\mathrm{d}x\right)'=\lambda f(x)
+				$$
+				och höger ledet ger:
+				$$
+					\left(\lambda\int f(x)\,\mathrm{d}x\right)'=\lambda\left(f(x)\,\mathrm{d}x\right)'=\lambda f(x)
+				$$
+				Se sedan kommentaren ovan.
+			</p>
+			<div class="qed"></div>
+		</section>
+	</main>
+</body>
+</html>
