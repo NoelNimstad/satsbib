@@ -1,0 +1,8 @@
+.{
+    .namn = "Satsen om skilda egenvärden och diagonaliserbarhet",
+    .paa_listan = true,
+    .nyckelord = .{
+        "egenvärden",
+        "diagonalisering",
+    },
+}

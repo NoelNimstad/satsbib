@@ -1,0 +1,9 @@
+.{
+    .namn = "Associativitet av matrisprodukten",
+    .paa_listan = true,
+    .nyckelord = .{
+        "matriser",
+        "associtativitet",
+        "räkneregler",
+    },
+}

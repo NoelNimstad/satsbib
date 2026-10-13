@@ -1,9 +1,0 @@
-.{
-    .namn = "Lemmat om vektorer på linjer",
-    .paa_listan = true,
-    .nyckelord = .{
-        "linjer",
-        "vektorer",
-        "lemma",
-    },
-}

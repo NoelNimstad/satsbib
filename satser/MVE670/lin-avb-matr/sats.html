@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Satsen om avbildningsmatrisen</title>
+	<link rel="stylesheet" href="../../../res/styles.css"/>
+	<script src="../../../res/db.js" defer></script>
+	<script src="../../../res/sats.js" defer></script>
+	<!-- Externa resurser -->
+	<link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="../../../index.html">Hem</a>
+			<button id="soek-knapp">Sök</button>
+		</nav>
+		<h1>Satsen om avbildningsmatrisen</h1>
+	</header>
+	<main>
+		<section>
+			<h3>Formulering</h3>
+			<p>
+				\( f(\vec{x}) \) är en linjär avbildning \( \iff f:\vec{x}\mapsto\mathbf{A}\vec{x} \), där \( \mathbf{A} \) benämns \( f \):s avbildningsmatris.
+			</p>
+		</section>
+		<section>
+			<h3>Bevis</h3>
+			<p>
+				(\( \implies \)) Låt \( \vec{x}=x_1\vec{e}_1+\dots+x_n\vec{e}_n \). Eftersom \( f \) är en linjär avbildning gäller att:
+				$$
+					f(\vec{x})=x_1f(\vec{e}_1)+\dots+x_nf(\vec{e}_n)
+				$$
+				Låt oss benämna \( f(\vec{e}_k) \) för \( \vec{a}_k \). Då gäller att (om vi låter \( \vec{x} \) vara en kolonnvektor):
+				$$
+				\begin{align*}
+					f(\vec{x})
+					&=x_1\vec{a}_1+\dots+x_n\vec{a}_n\\
+					&=\begin{pmatrix}
+						\vec{a}_1&\cdots&\vec{a}_n
+					\end{pmatrix}\begin{pmatrix}
+						x_1\\
+						\vdots\\
+						x_n
+					\end{pmatrix}\\
+					&=\begin{pmatrix}
+						\vec{a}_1&\cdots&\vec{a}_n
+					\end{pmatrix}\vec{x}\\
+					&\stackrel{\text{låt}}{=}\mathbf{A}\vec{x}
+				\end{align*}
+				$$
+			</p>
+			<p>
+				(\( \impliedby \)) Låt \( f:\vec{x}\mapsto\mathbf{A}\vec{x} \). Då gäller för vektorerna \( \vec{u} \) och \( \vec{v} \) och skalärerna \( \lambda \) och \( \mu \) genom räkneregler för matrismultiplikation att:
+				$$
+				\begin{align*}
+					f(\lambda\vec{u}+\mu\vec{v})
+					&=\mathbf{A}(\lambda\vec{u}+\mu\vec{v})\\
+					&=\mathbf{A}(\lambda\vec{u})+\mathbf{A}(\mu\vec{v})\\
+					&=\lambda\mathbf{A}\vec{u}+\mu\mathbf{A}\vec{v}\\
+					&=\lambda f(\vec{u})+\mu f(\vec{v})
+				\end{align*}
+				$$
+				Alltså är \( f:\vec{x}\mapsto\mathbf{A}\vec{x} \) en linjär avbildning.
+			</p>
+		</section>
+	</main>
+</body>
+</html>

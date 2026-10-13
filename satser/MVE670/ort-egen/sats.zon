@@ -1,0 +1,10 @@
+.{
+    .namn = "Ortogonalitet av egenvektorer till symmetriska matriser",
+    .paa_listan = true,
+    .nyckelord = .{
+        "ortogonalitet",
+        "egenvektorer",
+        "matriser",
+        "symmetri",
+    },
+}

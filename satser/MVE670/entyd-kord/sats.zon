@@ -1,0 +1,9 @@
+.{
+    .namn = "Entydig koordinatframställning i en bas",
+    .paa_listan = true,
+    .nyckelord = .{
+        "koordinater",
+        "bas",
+        "lemma",
+    },
+}

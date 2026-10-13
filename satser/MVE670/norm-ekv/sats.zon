@@ -3,7 +3,7 @@
     .paa_listan = true,
     .nyckelord = .{
         "ekvation",
-        "derivering",
+        "härledning",
         "optimisering",
     },
 }

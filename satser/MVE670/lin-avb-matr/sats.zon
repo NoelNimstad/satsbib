@@ -1,0 +1,8 @@
+.{
+    .namn = "Satsen om avbildningsmatrisen",
+    .paa_listan = true,
+    .nyckelord = .{
+        "linjära avbildningar",
+        "matriser",
+    },
+}

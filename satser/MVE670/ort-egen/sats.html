@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ortogonalitet av egenvektorer till symmetriska matriser</title>
+	<link rel="stylesheet" href="../../../res/styles.css"/>
+	<script src="../../../res/db.js" defer></script>
+	<script src="../../../res/sats.js" defer></script>
+	<!-- Externa resurser -->
+	<link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="../../../index.html">Hem</a>
+			<button id="soek-knapp">Sök</button>
+		</nav>
+		<h1>Ortogonalitet av egenvektorer till symmetriska matriser</h1>
+	</header>
+	<main>
+		<section>
+			<h3>Formulering</h3>
+			<p>
+				För en symmetrisk matris är egenvektorer till olika egenvärden  ortogonala.
+			</p>
+		</section>
+		<section>
+			<h3>Bevis</h3>
+			<p>
+				Låt \( \vec{S}_i \) och \( \vec{S}_j \) där \( i\neq j \) vara två egenvektorer med egenvärden \( \lambda_i \) och \( \lambda_j \) av den symmetriska matrisen \( \mathbf{A} \). Vi vill visa att
+				$$
+					\vec{S}_i\cdot\vec{S}_j=\vec{S}_i^\top\vec{S}_j=0.
+				$$
+			</p>
+			<p>
+				Eftersom \( \mathbf{A}^\top=\mathbf{A} \) gäller det att:
+				$$
+				\begin{align*}
+					\lambda_i\vec{S}_i^\top\vec{S}_j
+					&=(\lambda_i\vec{S}_i)^\top\vec{S}_j\\
+					&=(\mathbf{A}\vec{S}_i)^\top\vec{S}_j\\
+					&=\vec{S}_i^\top\mathbf{A}^\top\vec{S}_j\\
+					&=\vec{S}_i^\top\mathbf{A}\vec{S}_j\\
+					&=\vec{S}_i^\top\lambda_j\vec{S}_j\\
+					&=\lambda_j\vec{S}_i^\top\vec{S}_j\\
+				\end{align*}
+				$$
+				men \( \lambda_i\vec{S}_i^\top\vec{S}_j=\lambda_j\vec{S}_i^\top\vec{S}_j \) omm
+				$$
+					0=\lambda_i\vec{S}_i^\top\vec{S}_j-\lambda_j\vec{S}_i^\top\vec{S}_j=(\lambda_i-\lambda_j)\vec{S}_i^\top\vec{S}_j
+				$$
+				då \( \lambda_i\neq\lambda_j \) följer det att \( \vec{S}_i^\top\vec{S}_j \) måste vara \( 0 \).
+			</p>
+			<div class="qed"></div>
+		</section>
+	</main>
+</body>
+</html>

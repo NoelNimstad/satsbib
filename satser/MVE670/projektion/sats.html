@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Projektionsformeln uttryck</title>
+	<link rel="stylesheet" href="../../../res/styles.css"/>
+	<script src="../../../res/db.js" defer></script>
+	<script src="../../../res/sats.js" defer></script>
+	<!-- Externa resurser -->
+	<link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="../../../index.html">Hem</a>
+			<button id="soek-knapp">Sök</button>
+		</nav>
+		<h1>Projektionsformeln uttryck</h1>
+	</header>
+	<main>
+		<section>
+			<h3>Formulering</h3>
+			<p>
+				Ortogonalprojektionen av \( \vec{u} \) på \( \vec{v} \) ges av:
+				$$
+					\vec{u}_{\Vert \vec{v}}=\frac{\vec{u}\cdot\vec{v}}{\lVert\vec{v}\rVert^2}\vec{v}
+				$$
+			</p>
+		</section>
+		<section>
+			<h3>Bevis</h3>
+			<p>
+				Eftersom \( \vec{u}_{\Vert\vec{v}} \) är parallell med \( \vec{v} \) måste den ges av sambandet:
+				$$
+					\vec{u}_{\Vert\vec{v}}=c\vec{v}
+				$$
+				Dessutom måste restvektorn som är vinkelrät mot \( \vec{v} \) då ges av:
+				$$
+					\vec{u}_{\perp\vec{v}}=\vec{u}-\vec{u}_{\Vert\vec{v}}=\vec{u}-c\vec{v}
+				$$
+				Eftersom \( \vec{u}_{\perp\vec{v}} \) är vinkelrät mot \( \vec{v} \) måste dess skalärprodukt vara \( 0 \):
+				$$
+				\begin{align*}
+					\vec{v}\cdot\vec{u}_{\perp\vec{v}}=0
+					&\iff\vec{v}\cdot(\vec{u}-c\vec{v})=0\\
+					&\iff\vec{v}\cdot\vec{u}-c(\vec{v}\cdot\vec{v})=0\\
+					&\iff c\lVert\vec{v}\rVert^2=\vec{u}\cdot\vec{v}\\
+					&\therefore c=\frac{\vec{u}\cdot\vec{v}}{\lVert\vec{v}\rVert^2}
+				\end{align*}
+				$$
+				Alltså får vi att:
+				$$
+					\vec{u}_{\Vert\vec{v}}=c\vec{v}=\frac{\vec{u}\cdot\vec{v}}{\lVert\vec{v}\rVert^2}\vec{v}
+				$$
+			</p>
+			<div class="qed"></div>
+		</section>
+	</main>
+</body>
+</html>

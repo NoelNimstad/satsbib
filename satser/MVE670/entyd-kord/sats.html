@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Entydig koordinatframställning i en bas</title>
+	<link rel="stylesheet" href="../../../res/styles.css"/>
+	<script src="../../../res/db.js" defer></script>
+	<script src="../../../res/sats.js" defer></script>
+	<!-- Externa resurser -->
+	<link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="../../../index.html">Hem</a>
+			<button id="soek-knapp">Sök</button>
+		</nav>
+		<h1>Entydig koordinatframställning i en bas</h1>
+	</header>
+	<main>
+		<section>
+			<h3>Formulering</h3>
+			<p>
+				Låt \( \mathcal{B}=\left\{ \vec{e}_1,\dots,\vec{e}_n \right\} \) vara en bas för vektorrumet \( V \) där \( \operatorname{dim}V=n \). Då gäller att \( \forall\vec{v}\in V\exists! c_1,\dots,c_n \) s.a.:
+				$$
+					\vec{v}=\sum_{k=1}^nc_k\vec{e}_k
+				$$
+				där \( c_1,\dots,c_n \) benämns \( \vec{v} \):s koordinater i \( \mathcal{B} \).
+			</p>
+		</section>
+		<section>
+			<h3>Bevis</h3>
+			<p>
+				Vi delar upp beviset i två delar för existens och entydighet.
+			</p>
+			<p>
+				(<b>Existens</b> \( \exists \)) Eftersom \( \mathcal{B}=\left\{ \vec{e}_1,\dots,\vec{e}_n \right\} \) är en bas för \( V \), så gäller att \( \operatorname{span}\mathcal{B}=V \). Per definition av att \( \mathcal{B} \) spänner upp rummet följer att \( \forall \vec{v}\in V\exists c_1,\dots,c_n \) s.a.:
+				$$
+					\vec{v}=c_1\vec{e}_1+\dots+c_n\vec{e}_n
+				$$
+			</p>
+			<p>
+				(<b>Entydighet</b> \( \exists! \)) Antag \( \forall v\in V\exists \)två uppsättningar \( c_1,\dots,c_n \) och \( d_1,\dots,d_n \) s.a.:
+				$$
+				\begin{align*}
+					\vec{v}
+					&=c_1\vec{e}_1+\dots+c_n\vec{e}_n\\
+					&=d_1\vec{e}_1+\dots+d_n\vec{e}_n
+				\end{align*}
+				$$
+				Om vi tar differensen av uttrycken får vi att:
+				$$
+				\begin{align*}
+					\vec{0}
+					&=(c_1\vec{e}_1+\dots+c_n\vec{e}_n)-(d_1\vec{e}_1+\dots+d_n\vec{e}_n)\\
+					&=(c_1-d_1)\vec{e}_1+\dots+(c_n-d_n)\vec{e}_n
+				\end{align*}
+				$$
+				Eftersom \( \mathcal{B}=\left\{\vec{e}_1,\dots,\vec{e}_m\right\} \) är en bas, måste \( \vec{e}_1,\dots,\vec{e}_m \) vara linjärt oberoende vektorer. Ett <a class="sats">villkor för linjärt oberoende vektorer</a> är att denna ekvation endast har den triviella lösningar där koefficienterna är \( 0 \). Alltså:
+				$$
+					c_1-d_1=0,\quad\dots,\quad c_n-d_n=0
+				$$
+				vilket ger att:
+				$$
+					c_1=d_1,\quad\dots,\quad c_n=d_n
+				$$
+				Lösningen måste därför vara entydig.
+			</p>
+			<div class="qed"></div>
+		</section>
+	</main>
+</body>
+</html>

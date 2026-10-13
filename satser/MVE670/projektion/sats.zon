@@ -1,0 +1,8 @@
+.{
+    .namn = "Projektionsformeln uttryck",
+    .paa_listan = true,
+    .nyckelord = .{
+        "projektion",
+        "härledning",
+    },
+}

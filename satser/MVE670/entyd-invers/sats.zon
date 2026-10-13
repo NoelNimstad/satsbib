@@ -1,0 +1,8 @@
+.{
+    .namn = "Inversens entydighet",
+    .paa_listan = true,
+    .nyckelord = .{
+        "matriser",
+        "inverser",
+    },
+}

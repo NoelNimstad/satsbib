@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inversens entydighet</title>
+	<link rel="stylesheet" href="../../../res/styles.css"/>
+	<script src="../../../res/db.js" defer></script>
+	<script src="../../../res/sats.js" defer></script>
+	<!-- Externa resurser -->
+	<link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="../../../index.html">Hem</a>
+			<button id="soek-knapp">Sök</button>
+		</nav>
+		<h1>Entydighet av matrisinverser</h1>
+	</header>
+	<main>
+		<section>
+			<h3>Formulering</h3>
+			<p>
+				Låt \( \mathbf{V} \), \( \mathbf{H} \) och \( \mathbf{A} \) vara s.a. multiplikationerna \( \mathbf{V}\mathbf{A} \) och \( \mathbf{A}\mathbf{H} \) dem emellan är definerat. Då gäller att:
+			</p>
+			<ol>
+				<li>
+					Om \( \mathbf{V}\mathbf{A}=\mathbf{A}\mathbf{H}=\mathbf{E} \), så är \( \mathbf{V}=\mathbf{H} \).
+				</li>
+				<li>
+					Om \( \mathbf{A} \) är inverterbar så är inversen entydigt bestämd.
+				</li>
+			</ol>
+		</section>
+		<section>
+			<h3>Bevis</h3>
+			<p>
+				För 1. använder vi ett direkt bevis som följer av <a class="sats" sats="associativitet av matrisprodukten">associativitet</a>:
+				$$
+					\mathbf{V}=\mathbf{V}\mathbf{E}=\mathbf{V}(\mathbf{A}\mathbf{H})=(\mathbf{V}\mathbf{A})\mathbf{H}=\mathbf{E}\mathbf{H}=\mathbf{H}
+				$$
+				Alltså måste \( \mathbf{V}=\mathbf{H} \).
+			</p>
+			<p>
+				För 2. antar vi att det finns två inverser till \( \mathbf{A} \), \( \mathbf{V} \) och \( \mathbf{H} \). Då gäller att:
+				$$
+					\mathbf{V}\mathbf{A}=\mathbf{E}=\mathbf{A}\mathbf{H},
+				$$ fast då föjer av delsats 1. att \( \mathbf{V}=\mathbf{H} \). Alltså måste inversen vara entydigt bestämd.
+			</p>
+			<div class="qed"></div>
+		</section>
+	</main>
+</body>
+</html>

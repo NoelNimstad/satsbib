@@ -10,9 +10,15 @@ const db = [
 	{"kurs":"TMA970","fil_namn":"lagranges_m-v-s.","sats":"Lagranges medelvärdessats","paa_listan":true,"nyckelord":["lagrange","medelvärden","derivator","existens"]},
 	{"kurs":"TMA970","fil_namn":"weierstrasssats","sats":"Weierstrass sats","paa_listan":false,"nyckelord":["weierstrass","extremvärden","kontinuerliga funktioner"]},
 	{"kurs":"TMA970","fil_namn":"derivators-linearitet","sats":"Derivatans linearitet","paa_listan":false,"nyckelord":["linearitet","derivator"]},
-	{"kurs":"MVE670","fil_namn":"norm-ekv","sats":"Normalekvationens minimering","paa_listan":true,"nyckelord":["ekvation","derivering","optimisering"]},
+	{"kurs":"MVE670","fil_namn":"assoc-matr","sats":"Associativitet av matrisprodukten","paa_listan":true,"nyckelord":["matriser","associtativitet","räkneregler"]},
+	{"kurs":"MVE670","fil_namn":"norm-ekv","sats":"Normalekvationens minimering","paa_listan":true,"nyckelord":["ekvation","härledning","optimisering"]},
+	{"kurs":"MVE670","fil_namn":"entyd-kord","sats":"Entydig koordinatframställning i en bas","paa_listan":true,"nyckelord":["koordinater","bas","lemma"]},
 	{"kurs":"MVE670","fil_namn":"spektralsatsen","sats":"Spektralsatsen","paa_listan":true,"nyckelord":["inverterbar","matriser","ortogonal","symmetrisk"]},
+	{"kurs":"MVE670","fil_namn":"projektion","sats":"Projektionsformeln uttryck","paa_listan":true,"nyckelord":["projektion","härledning"]},
+	{"kurs":"MVE670","fil_namn":"ort-egen","sats":"SATS NAMN","paa_listan":true,"nyckelord":["dragos","röst","isar","i","blodet"]},
+	{"kurs":"MVE670","fil_namn":"entyd-invers","sats":"Inversens entydighet","paa_listan":true,"nyckelord":["matriser","inverser"]},
 	{"kurs":"MVE670","fil_namn":"spår-sats","sats":"Egenvärden och spår/determinanter","paa_listan":true,"nyckelord":["spår","egenvärden","matriser"]},
-	{"kurs":"MVE670","fil_namn":"vektorer-p-linjen","sats":"Lemmat om vektorer på linjer","paa_listan":true,"nyckelord":["linjer","vektorer","lemma"]},
-	{"kurs":"MVE670","fil_namn":"linj-obr.triviell","sats":"Villkor för linjärt oberoende vektorer","paa_listan":true,"nyckelord":["linjärt oberoende","vektorer","linjära kombinationer","triviell lösning"]}
+	{"kurs":"MVE670","fil_namn":"lin-avb-matr","sats":"Satsen om avbildningsmatrisen","paa_listan":true,"nyckelord":["linjära avbildningar","matriser"]},
+	{"kurs":"MVE670","fil_namn":"linj-obr.triviell","sats":"Villkor för linjärt oberoende vektorer","paa_listan":true,"nyckelord":["linjärt oberoende","vektorer","linjära kombinationer","triviell lösning"]},
+	{"kurs":"MVE670","fil_namn":"skild-egen-diag","sats":"Satsen om skilda egenvärden och diagonaliserbarhet","paa_listan":true,"nyckelord":["egenvärden","diagonalisering"]}
 ];

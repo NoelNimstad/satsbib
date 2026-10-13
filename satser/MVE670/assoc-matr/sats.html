@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Associativitet av matrisprodukten</title>
+	<link rel="stylesheet" href="../../../res/styles.css"/>
+	<script src="../../../res/db.js" defer></script>
+	<script src="../../../res/sats.js" defer></script>
+	<!-- Externa resurser -->
+	<link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="../../../index.html">Hem</a>
+			<button id="soek-knapp">Sök</button>
+		</nav>
+		<h1>Associativitet av matrisprodukten</h1>
+	</header>
+	<main>
+		<section>
+			<h3>Formulering</h3>
+			<p>
+				För tre matriser \( \mathbf{A} \), \( \mathbf{B} \) och \( \mathbf{C} \) vars storlek tillåter multiplikation gäller att:
+				$$
+					(\mathbf{A}\mathbf{B})\mathbf{C}=\mathbf{A}(\mathbf{B}\mathbf{C})
+				$$
+			</p>
+		</section>
+		<section>
+			<h3>Bevis</h3>
+			<p>
+				Antag \( \mathbf{A} \) typ \( m\times n \), \( \mathbf{B} \) typ \( n\times p \) och \( \mathbf{C} \) typ \( p\times q \). För matrismultiplikation gäller att:
+				$$
+					(\mathbf{A}\mathbf{B})_{ij}=\sum_{k=1}^na_{ik}b_{kj}
+				$$
+				där \( \mathbf{A}\mathbf{B} \) typ \( m\times p \). Alltså gäller för \( (\mathbf{A}\mathbf{B})\mathbf{C} \) att:
+				$$
+				\begin{align*}
+					[(\mathbf{A}\mathbf{B})\mathbf{C}]_{ij}
+					&=\sum_{\nu=1}^p\left(\sum_{k=1}^na_{ik}b_{k\nu}\right)c_{\nu j}\\
+					&=\sum_{\nu=1}^p\left(\sum_{k=1}^na_{ik}b_{k\nu}c_{\nu j}\right)\\
+					&=\sum_{k=1}^n\left(\sum_{\nu=1}^pa_{ik}b_{k\nu}c_{\nu j}\right)\\
+					&=\sum_{k=1}^na_{ik}\left(\sum_{\nu=1}^pb_{k\nu}c_{\nu j}\right)\\
+					&=[\mathbf{A}(\mathbf{B}\mathbf{C})]_{ij}
+				\end{align*}
+				$$
+			</p>
+			<div class="qed"></div>
+		</section>
+	</main>
+</body>
+</html>

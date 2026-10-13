@@ -171,7 +171,14 @@ const rengoerHtml = str =>
 
 [...document.getElementsByClassName("sats")].forEach(s =>
 {
-	const db_sats = db.find(e => e.sats == s.innerText);
+	const till_sats = s.getAttribute("sats");
+	const db_sats = db.find(e =>
+		e.sats.toLowerCase() == (till_sats 
+			? till_sats.toLowerCase()
+			: s.innerText.toLowerCase()
+		)
+	);
+
 	if(!db_sats)
 	{
 		return s.classList.add("finns-inte");

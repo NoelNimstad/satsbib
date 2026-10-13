@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Satsen om skilda egenvärden och diagonaliserbarhet</title>
+	<link rel="stylesheet" href="../../../res/styles.css"/>
+	<script src="../../../res/db.js" defer></script>
+	<script src="../../../res/sats.js" defer></script>
+	<!-- Externa resurser -->
+	<link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="../../../index.html">Hem</a>
+			<button id="soek-knapp">Sök</button>
+		</nav>
+		<h1>Satsen om skilda egenvärden och diagonaliserbarhet</h1>
+	</header>
+	<main>
+		<section>
+			<h3>Formulering</h3>
+			<p>
+				Låt \( \mathbf{A} \) vara en \( n\times n \) matris. Om \( p_\mathbf{A}(\lambda) \) har \( n \) skilda egenvärden så är \( \mathbf{A} \) diagonaliserbar.
+			</p>
+		</section>
+		<section>
+			<h3>Bevis</h3>
+			<p>
+				Antag \( \mathbf{A} \) har \( n \) skilda egenvärden. En matris \( \mathbf{A} \) är diagonaliserbar omm det finns en bas för \( \mathbb{R}^n \) bestående av \( \mathbf{A} \):s egenvektorer. Då vi har \( n \) stycken egenvektorer \( \vec{S}_1,\dots,\vec{S}_n \), ger <a class="sats">bassatsen</a> att det räcker att visa att \( \vec{S}_1,\dots,\vec{S}_n \) är linjärt obereonde för att de ska utgöra en bas.
+			</p>
+			<p>
+				Vi ställer upp ekvationen
+				$$
+					x_1\vec{S}_1+\dots+x_n\vec{S}_n=\vec{0}.
+				$$
+				Vi vill visa att denna endast har den <a class="sats" sats="Villkor för linjärt oberoende vektorer">triviella lösningen</a> \( x_1=\dots=x_n=0 \). Per definition av ett egenvärde har vi att \( \mathbf{A}\vec{S}_k=\lambda_k\vec{S}_k \). Vi multiplicerar uppställda ekvationen med \( \mathbf{A}-\lambda_1\mathbf{E} \) från vänster för att få:
+				$$
+				\begin{align*}
+					\vec{0}&=x_1(\mathbf{A}-\lambda_1\mathbf{E})\vec{S}_1+\dots+x_n(\mathbf{A}-\lambda_1\mathbf{E})\vec{S}_n\\
+					&=x_1(\mathbf{A}\vec{S}_1-\lambda_1\vec{S}_1)+\dots+x_n(\mathbf{A}\vec{S}_n-\lambda_1\vec{S}_n)\\
+					&=x_1(\lambda_1\vec{S}_1-\lambda_1\vec{S}_1)+\dots+x_n(\lambda_n\vec{S}_n-\lambda_1\vec{S}_n)\\
+					&=x_1(\lambda_1-\lambda_1)\vec{S}_1+x_2(\lambda_2-\lambda_1)\vec{S}_2+\dots+x_n(\lambda_n-\lambda_1)\vec{S}_n\\
+					&=x_2(\lambda_2-\lambda_1)\vec{S}_2+\dots+x_n(\lambda_n-\lambda_1)\vec{S}_n
+				\end{align*}
+				$$
+				Likadant, om vi multiplicerar denna ekvation med \( \mathbf{A}-\lambda_2\mathbf{E} \) får vi att:
+				$$
+					\vec{0}=x_3(\lambda_3-\lambda_2)(\lambda_3-\lambda_1)\vec{S}_3+\dots+x_n(\lambda_n-\lambda_2)(\lambda_n-\lambda_1)\vec{S}_n
+				$$
+				Vi upprepar detta tills \( n-1 \) för att få ut:
+				$$
+					x_n(\lambda_n-\lambda_{n-1})\dots(\lambda_n-\lambda_1)\vec{S}_n=\vec{0}
+				$$
+				Då egenvärdena är skilda, och \( \vec{S}_n \) är nollskilt per definition av egenvektorer, måste \( x_n=0 \) för att ekvationen ska hålla.
+			</p>
+			<p>
+				Genom att applicera samma process får vi ut att alla koefficienter \( x_k \) måste vara lika med \( 0 \). Alltså måste vår ekvation endast ha den <a class="sats" sats="Villkor för linjärt oberoende vektorer">triviella lösningen</a>, och därmed är egenvektorerna linjärt oberoende.
+			</p>
+			<p>
+				Då det är \( n \) stycken linjärt oberoende egenvektorer ger <a class="sats">bassatsen</a> att de spänner upp ett egenrum \( E \) med dimension \( n \).
+			</p>
+			<div class="qed"></div>
+		</section>
+	</main>
+</body>
+</html>
