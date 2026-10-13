@@ -15,7 +15,7 @@ const db = [
 	{"kurs":"MVE670","fil_namn":"entyd-kord","sats":"Entydig koordinatframställning i en bas","paa_listan":true,"nyckelord":["koordinater","bas","lemma"]},
 	{"kurs":"MVE670","fil_namn":"spektralsatsen","sats":"Spektralsatsen","paa_listan":true,"nyckelord":["inverterbar","matriser","ortogonal","symmetrisk"]},
 	{"kurs":"MVE670","fil_namn":"projektion","sats":"Projektionsformeln uttryck","paa_listan":true,"nyckelord":["projektion","härledning"]},
-	{"kurs":"MVE670","fil_namn":"ort-egen","sats":"SATS NAMN","paa_listan":true,"nyckelord":["dragos","röst","isar","i","blodet"]},
+	{"kurs":"MVE670","fil_namn":"ort-egen","sats":"Ortogonalitet av egenvektorer till symmetriska matriser","paa_listan":true,"nyckelord":["ortogonalitet","egenvektorer","matriser","symmetri"]},
 	{"kurs":"MVE670","fil_namn":"entyd-invers","sats":"Inversens entydighet","paa_listan":true,"nyckelord":["matriser","inverser"]},
 	{"kurs":"MVE670","fil_namn":"spår-sats","sats":"Egenvärden och spår/determinanter","paa_listan":true,"nyckelord":["spår","egenvärden","matriser"]},
 	{"kurs":"MVE670","fil_namn":"lin-avb-matr","sats":"Satsen om avbildningsmatrisen","paa_listan":true,"nyckelord":["linjära avbildningar","matriser"]},
