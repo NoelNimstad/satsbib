@@ -1,0 +1,10 @@
+.{
+    .namn = "Egenskaper hos nollvektorn",
+    .paa_listan = false,
+    .nyckelord = .{
+        "nollvektor",
+        "vektorrum",
+        "abstrakt algebra",
+        "enhetselement",
+    },
+}

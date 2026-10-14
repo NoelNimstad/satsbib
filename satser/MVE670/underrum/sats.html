@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Underrumskriteriet</title>
+	<link rel="stylesheet" href="../../../res/styles.css"/>
+	<script src="../../../res/db.js" defer></script>
+	<script src="../../../res/sats.js" defer></script>
+	<!-- Externa resurser -->
+	<link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="../../../index.html">Hem</a>
+			<button id="soek-knapp">Sök</button>
+		</nav>
+		<h1>Underrumskriteriet</h1>
+	</header>
+	<main>
+		<section>
+			<h3>Formulering</h3>
+			<p>
+				Låt \( V \) vara ett vektorrum över kroppen \( K \) och \( M\subset V \) där \( M\neq\emptyset \). Då är \( M \) ett underrum till \( V\iff\forall \vec{u},\vec{v}\in M \) och \( \forall c,k\in K \) gäller att \( c\vec{u}+k\vec{v}\in M \).
+			</p>
+		</section>
+		<section>
+			<h3>Bevis</h3>
+			<p>
+				(\( \implies \)) Antag \( M \) underrum till \( V \). Enligt definitionen av ett underrum är \( M \) i sig ett vektorrum under samma operationer. Alltså gäller att \( M \) är slutet under addition och skalning.
+			</p>
+			<p>
+				Detta ger att för godtyckliga skalärer \( c,k\in K \) och vektorer \( \vec{u},\vec{v}\in M \) så är \( c\vec{u}\in M \) och \( k\vec{v}\in M \). Eftersom dessa element fortfarande är i vektorrummet måste deras summa också vara det, alltså \( c\vec{u}+k\vec{v}\in M \).
+			</p>
+			<p>
+				(\( \impliedby \)) Antag \( \forall c,k\in K \) och \( \forall \vec{u},\vec{v}\in M \) gäller att \( c\vec{u}+k\vec{v}\in M \), där \( M\neq\emptyset \).
+			</p>
+			<p>
+				Vi vill visa att \( M \) uppfyller de axiomer som krävs av ett vektorrum.
+			</p>
+			<ol>
+				<li>
+					Då \( M\neq\emptyset \) existerar åtminstone ett element \( \vec{u}\in M \). Välj \( c=k=0 \). Då har vi från antagandet att \( \forall\vec{u},\vec{v}\in M\implies 0\vec{u}+0\vec{v}=\vec{0}\in M \). Alltså är nollvektorn i \( M \).
+				</li>
+				<li>
+					Då vi kan välja \( c=k=1 \) och få ut att \( 1\vec{u}+1\vec{v}=\vec{u}+\vec{v}\in M \) är \( M \) slutet under addition.
+				</li>
+				<li>
+					Då vi ha \( c\in K \) och välja \( k=0 \) för att få ut \( c\vec{u}+0\vec{k}=c\vec{u}\in M \) är \( M \) slutet under skalning.
+				</li>
+			</ol>
+			<p>
+				Resterande vektorrumsaxiomen följer för \( M \) av att de gäler i större rummet \( V \). Eftersom \( M \) därmed är ett vektorrum i egen rätt är det per definition ett underrum till \( V \).
+			</p>
+		</section>
+	</main>
+</body>
+</html>

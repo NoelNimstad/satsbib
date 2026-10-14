@@ -1,0 +1,9 @@
+.{
+    .namn = "Underrumskriteriet",
+    .paa_listan = false,
+    .nyckelord = .{
+        "underrum",
+        "vektorrum",
+        "abstrakt algebra",
+    },
+}

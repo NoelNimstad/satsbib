@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Egenskaper hos nollvektorn</title>
+	<link rel="stylesheet" href="../../../res/styles.css"/>
+	<script src="../../../res/db.js" defer></script>
+	<script src="../../../res/sats.js" defer></script>
+	<!-- Externa resurser -->
+	<link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="../../../index.html">Hem</a>
+			<button id="soek-knapp">Sök</button>
+		</nav>
+		<h1>Egenskaper hos nollvektorn</h1>
+	</header>
+	<main>
+		<section>
+			<h3>Formulering</h3>
+			<p>
+				Låt \( V \) vara ett vektorrum över kroppen \( K \), där \( \vec{0} \) är nollvektorn till \( V \) och \( 0 \) är nollskalären till \( K \). Då gäller \( \forall \vec{u}\in V,c\in K \) att:
+			</p>
+			<ol>
+				<li>
+					\( 0\cdot\vec{u}=\vec{0} \)
+				</li>
+				<li>
+					\( c\cdot\vec{0}=\vec{0} \)
+				</li>
+			</ol>
+		</section>
+		<section>
+			<h3>Bevis</h3>
+			<p>
+				För del 1. använder vi att \( 0+0=0 \) för att få ut genom multiplikation med godtycklig vektor \( \vec{u}\in V \) att:
+				$$
+				\begin{align*}
+					0\cdot{u}
+					&=(0+0)\cdot\vec{u}\\
+					&=0\cdot\vec{u}+0\cdot\vec{u}\\
+					\iff\vec{0}&=0\cdot\vec{u}
+				\end{align*}
+				$$
+			</p>
+			<p>
+				För del 2. använder vi att \( \vec{0}+\vec{0}=\vec{0} \) för att få ut genom multiplikation med godtycklig skalär \( c\in K \):
+				$$
+				\begin{align*}
+					c\cdot\vec{0}
+					&=c\cdot(\vec{0}+\vec{0})\\
+					&=c\cdot\vec{0}+c\cdot\vec{0}\\
+					\iff\vec{0}&=c\cdot\vec{0}
+				\end{align*}
+				$$
+			</p>
+		</section>
+	</main>
+</body>
+</html>

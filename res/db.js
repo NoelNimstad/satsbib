@@ -12,6 +12,7 @@ const db = [
 	{"kurs":"TMA970","fil_namn":"derivators-linearitet","sats":"Derivatans linearitet","paa_listan":false,"nyckelord":["linearitet","derivator"]},
 	{"kurs":"MVE670","fil_namn":"assoc-matr","sats":"Associativitet av matrisprodukten","paa_listan":true,"nyckelord":["matriser","associtativitet","räkneregler"]},
 	{"kurs":"MVE670","fil_namn":"norm-ekv","sats":"Normalekvationens minimering","paa_listan":true,"nyckelord":["ekvation","härledning","optimisering"]},
+	{"kurs":"MVE670","fil_namn":"underrum","sats":"Underrumskriteriet","paa_listan":false,"nyckelord":["underrum","vektorrum","abstrakt algebra"]},
 	{"kurs":"MVE670","fil_namn":"entyd-kord","sats":"Entydig koordinatframställning i en bas","paa_listan":true,"nyckelord":["koordinater","bas","lemma"]},
 	{"kurs":"MVE670","fil_namn":"spektralsatsen","sats":"Spektralsatsen","paa_listan":true,"nyckelord":["inverterbar","matriser","ortogonal","symmetrisk"]},
 	{"kurs":"MVE670","fil_namn":"projektion","sats":"Projektionsformeln uttryck","paa_listan":true,"nyckelord":["projektion","härledning"]},
@@ -20,5 +21,6 @@ const db = [
 	{"kurs":"MVE670","fil_namn":"spår-sats","sats":"Egenvärden och spår/determinanter","paa_listan":true,"nyckelord":["spår","egenvärden","matriser"]},
 	{"kurs":"MVE670","fil_namn":"lin-avb-matr","sats":"Satsen om avbildningsmatrisen","paa_listan":true,"nyckelord":["linjära avbildningar","matriser"]},
 	{"kurs":"MVE670","fil_namn":"linj-obr.triviell","sats":"Villkor för linjärt oberoende vektorer","paa_listan":true,"nyckelord":["linjärt oberoende","vektorer","linjära kombinationer","triviell lösning"]},
+	{"kurs":"MVE670","fil_namn":"prop-om-vrum","sats":"Egenskaper hos nollvektorn","paa_listan":false,"nyckelord":["nollvektor","vektorrum","abstrakt algebra","enhetselement"]},
 	{"kurs":"MVE670","fil_namn":"skild-egen-diag","sats":"Satsen om skilda egenvärden och diagonaliserbarhet","paa_listan":true,"nyckelord":["egenvärden","diagonalisering"]}
 ];
