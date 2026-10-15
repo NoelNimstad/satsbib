@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dimensionssatsen</title>
+	<link rel="stylesheet" href="../../../res/styles.css"/>
+	<script src="../../../res/db.js" defer></script>
+	<script src="../../../res/sats.js" defer></script>
+	<!-- Externa resurser -->
+	<link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="../../../index.html">Hem</a>
+			<button id="soek-knapp">Sök</button>
+		</nav>
+		<h1>Dimensionssatsen</h1>
+	</header>
+	<main>
+		<section>
+			<h3>Formulering</h3>
+			<p>
+				Antag \( \mathbf{A} \) typ \( m\times n \). Då gäller att:
+				$$
+					\operatorname{rang}\mathbf{A}+\operatorname{nolldim}\mathbf{A}=n
+				$$
+			</p>
+		</section>
+		<section>
+			<h3>Bevis</h3>
+			<p>
+                Låt \( k = \operatorname{nolldim}\mathbf{A} \) vara nollrummets dimension, och låt \( \mathcal{B}=\{ \vec{v}_1, \dots, \vec{v}_k \} \) vara en bas för nollrummet \( \operatorname{ker}\mathbf{A} \). Enligt basutvidgningssatsen kan denna utvidgas till en bas för hela \( \mathbb{R}^n \):
+                $$
+                    \mathcal{B}^*=\{\vec{v}_1,\dots,\vec{v}_k,\vec{u}_{k+1},\dots,\vec{u}_n\}
+                $$
+            </p>
+            <p>
+                Vi betraktar nu bildvektorerna \( \{\mathbf{A}\vec{u}_{k+1}, \dots,\mathbf{A}\vec{u}_n\} \) och visar att de utgör en bas för \( \operatorname{Kolonn}\mathbf{A} \). Antag en linjärkombination som är lika med nollvektorn:
+                $$
+                    \lambda_{k+1}\mathbf{A}\vec{u}_{k+1}+\dots+\lambda_n\mathbf{A}\vec{u}_n =\vec{0}
+                    \implies\mathbf{A}(\lambda_{k+1}\vec{u}_{k+1}+\dots+\lambda_n\vec{u}_n)=\vec{0}
+                $$
+                Detta medför att vektorn \( \vec{x}=\lambda_{k+1}\vec{u}_{k+1}+ \dots+\lambda_n\vec{u}_n\in\operatorname{ker}\mathbf{A} \), och kan därmed skrivas som en linjärkombination av nollrummets basvektorer:
+                $$
+				\begin{align*}
+                    \lambda_{k+1}\vec{u}_{k+1}+\dots+\lambda_n\vec{u}_n&=\lambda_1\vec{v}_1+\dots+\lambda_k\vec{v}_k\\
+                    \implies-\lambda_1\vec{v}_1-\dots-\lambda_k\vec{v}_k+\lambda_{k+1}\vec{u}_{k+1}+\dots+\lambda_n\vec{u}_n&=\vec{0}
+				\end{align*}
+                $$
+                Eftersom dessa vektorer ger basen \( \mathcal{B}^* \) måste samtliga koefficienter vara noll, alltså ger detta att \( \lambda_{k+1}=\dots=\lambda_n=0 \). Vektorerna \( \{ \mathbf{A}\vec{u}_{k+1},\dots,\mathbf{A}\vec{u}_n \} \) är därmed linjärt oberoende.
+            </p>
+            <p>
+                Eftersomtydligt varje kolonn i \( \mathbf{A} \) kan uttryckas i termer av dessa vektorer, spänner de upp kolonnrummet. Därmed är \( \operatorname{rang}\mathbf{A}=n-k \). Detta ger att:
+                $$
+                    \operatorname{rang}\mathbf{A} + \operatorname{nolldim}\mathbf{A} = (n - k) + k = n
+                $$
+            </p>
+            <div class="qed"></div>
+		</section>
+	</main>
+</body>
+</html>

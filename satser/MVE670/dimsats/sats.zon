@@ -1,0 +1,9 @@
+.{
+    .namn = "Dimensionssatsen",
+    .paa_listan = false,
+    .nyckelord = .{
+        "dimensioner",
+        "rang",
+        "nolldim",
+    },
+}

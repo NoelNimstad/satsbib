@@ -1,0 +1,10 @@
+.{
+    .namn = "Bassatsen",
+    .paa_listan = true,
+    .nyckelord = .{
+        "baser",
+        "RR^n",
+        "span",
+        "linjärt oberoende",
+    },
+}

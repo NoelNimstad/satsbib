@@ -1,0 +1,10 @@
+.{
+    .namn = "Lemmat om relationen mellan undre och övre summor",
+    .paa_listan = false,
+    .nyckelord = .{
+        "lemma",
+        "undre summor",
+        "övre summor",
+        "Riemann summor",
+    },
+}

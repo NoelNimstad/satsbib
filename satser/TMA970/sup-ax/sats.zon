@@ -1,0 +1,9 @@
+.{
+    .namn = "Supremumaxiomet",
+    .paa_listan = false,
+    .nyckelord = .{
+        "supremum",
+        "reel analys",
+        "begränsning",
+    },
+}

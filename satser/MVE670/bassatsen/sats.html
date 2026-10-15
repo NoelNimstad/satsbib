@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bassatsen</title>
+	<link rel="stylesheet" href="../../../res/styles.css"/>
+	<script src="../../../res/db.js" defer></script>
+	<script src="../../../res/sats.js" defer></script>
+	<!-- Externa resurser -->
+	<link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="../../../index.html">Hem</a>
+			<button id="soek-knapp">Sök</button>
+		</nav>
+		<h1>Bassatsen</h1>
+	</header>
+	<main>
+		<section>
+			<h3>Formulering</h3>
+			<p>
+				Bassatsen är uppbruten i 4 delsatser. Dessa lyder enligt:
+			</p>
+			<ol>
+				<li>
+					<ol style="list-style: lower-alpha;">
+						<li>
+							Fler än \( n \) vektorer i \( \mathbb{R}^n \) är linjärt beroende.
+						</li>
+						<li>
+							Det krävs åtminstone \( n \) vektorer för att spänna upp \( \mathbb{R}^n \).
+						</li>
+						<li>
+							En bas \( \mathcal{B} \) för \( \mathbb{R}^n \) består av exakt \( n \) vektorer.
+						</li>
+					</ol>
+				</li>
+				<li>
+					\( \mathcal{B}=\left\{\vec{v}_1,\dots,\vec{v}_n\right\} \) bas för \( \mathbb{R}^n\iff\vec{v}_1,\dots,\vec{v}_n \) linjärt oberoende \( \iff\operatorname{span}\mathcal{B}=\mathbb{R}^n \)
+				</li>
+			</ol>
+		</section>
+		<section>
+			<h3>Bevis</h3>
+			<p>
+				Vi bevisar varje delsats för sig själv.
+			</p>
+			<ol>
+				<li>
+					<ol style="list-style: lower-alpha;">
+						<li>
+							Betrakta vektorerna \( \vec{v}_1=(v_{11},\dots,v_{n1}),\dots,\vec{v}_k=(v_{1k},\dots,v_{nk}) \) där \( k>n \). Om vi ställer upp LES:et:
+							$$
+								(\mathbf{A}\,\vert\,\vec{0})\sim\begin{pmatrix}
+									v_{11}&\dots&v_{1k}&0\\  
+									\vdots&&\vdots&0\\
+									v_{n1}&\dots&v_{nk}&0\\  
+								\end{pmatrix}
+							$$
+							och Gaussar kan högst \( n \) pivotelement inträffa. Då \( k>n \) kommer det alltså finnas kolonner utan pivotelement, vilket ger fria variabler. Alltså finns inte endast den <a class="sats" sats="villkor för linjärt oberoende vektorer">triviella lösningen till ekvationen</a> \( \lambda_1\vec{v}_1+\dots+\lambda_k\vec{v}_k=\vec{0} \), vilket innebär att vektorerna är linjärt beroende.
+						</li>
+						<li>
+							Antag för motsägelse att med \( k < n \) så har vi att vektorerna \( \vec{v}_1,\dots,\vec{v}_k \) spänner upp \( \mathbb{R}^n \). Om vi bildar matrisen \( \mathbf{A}=\left(\vec{v}_1,\dots,\vec{v}_k\right) \) av typ \( n\times k \), innebär per definition av att vara spännande att ekvationen \( \mathbf{A}\vec{x}=\vec{b} \) har en lösning \( \forall\vec{b}\in\mathbb{R}^n \). När vi Gaussar matrisen kan vi få högst \( k \) pivotelement. Då \( k < n \) kommer det att uppstå minst en nollrad längst ner i trappstegsformen. Låt oss välja ett \( \vec{b} \) s.a. dess element i dessa rader (låt kalla \( c \)) är nollskilt. Vi får då ekvationen \( 0=c \), där \( c\neq0 \). Alltså har vi en motsägelse från att de spänner upp \( \mathbb{R}^n \), varför \( k\geq n \).
+						</li>
+						<li>
+							<p>
+								Per definition av en bas \( \mathcal{B}=\{\vec{v}_1,\dots,\vec{v}_k\} \) för \( \mathbb{R}^n \) måste det gälla att:
+							</p>
+							<ol style="list-style: lower-roman;">
+								<li>
+									\( \vec{v}_1,\dots,\vec{v}_k \) linjärt oberoende
+								</li>
+								<li>
+									\( \operatorname{span}\mathcal{B}=\mathbb{R}^n \)
+								</li>
+							</ol>
+							<p>
+								Från delsats 1. a. har vi att för att vektorerna \( \vec{v}_1,\dots,\vec{v}_k \) ska vara linjärt oberoende måste \( k\leq n \). Dessutom har vi från delsats 1. b. att det behövs åtminstone \( n \) vektorer för att \( \operatorname{span}(\vec{v}_1,\dots,\vec{v}_k)=\mathbb{R}^n \), alltså måste \( k\geq n \). Sammansatt får vi då att \( (k\leq n)\wedge(k\geq n)\implies k=n \). Alltså består en bas för \( \mathbb{R}^n \) av exakt \( n \) vektorer.
+							</p>
+						</li>
+					</ol>
+				</li>
+				<li>
+					<p>
+                        Låt \( \vec{v}_1,\dots,\vec{v}_n \) vara \( n \) vektorer i \( \mathbb{R}^n \). Vi visar ekvivalenserna genom att visa följande implikationer:
+                    </p>
+                    <ul>
+                        <li>
+                            (Bas \(\implies\) linjärt oberoende & spänner upp) Detta följer per definition av en bas.
+                        </li>
+                        <li>
+                            (Linjärt oberoende \(\implies\) spänner upp): Om \( \vec{v}_1,\dots,\vec{v}_n \) linjärt oberoende har matrisen \( \mathbf{A}=\left(\vec{v}_1,\dots,\vec{v}_n\right) \) av typ \( n\times n \), \( n \) pivotelement vid Gausselimination. Detta medför att \( \mathbf{A}\vec{x}=\vec{b} \) har en unik lösning \( \forall\vec{b}\in\mathbb{R}^n \), varför de spänner upp rummet.
+                        </li>
+                        <li>
+                            (Spänner upp \(\implies\) linjärt oberoende) Om de \( n \) vektorerna spänner upp \( \mathbb{R}^n \)  måste \( \mathbf{A}\vec{x}=\vec{b} \) ha minst en lösning \( \forall\vec{b}\in\mathbb{R}^n \). Detta kräver att \( \mathbf{A} \) har \( n \) pivotelement. Eftersom matrisen är av typ \( n\times n \), ger \( n \) pivotelement att det inte finns några fria variabler. Det homogena ekvationssystemet \( \mathbf{A}\vec{x}=\vec{0} \) har därför endast den triviella lösningen \( \vec{x}=0 \), och alltså är \( \vec{v}_1,\dots,\vec{v}_n \) linjärt oberoende.
+                        </li>
+                    </ul>
+                    <p>
+                        Eftersom en bas per definition utgörs av mängder som både är linjärt oberoende och spänner upp rummet, är samtliga påståenden ekvivalenta.
+                    </p>
+				</li>
+			</ol>
+			<div class="qed"></div>
+		</section>
+	</main>
+</body>
+</html>

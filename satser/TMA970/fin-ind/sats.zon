@@ -1,0 +1,10 @@
+.{
+    .namn = "Satsen om förfinad indelning",
+    .paa_listan = false,
+    .nyckelord = .{
+        "supremum",
+        "infimum",
+        "indelning",
+        "Darboux-summor",
+    },
+}

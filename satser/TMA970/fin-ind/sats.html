@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Satsen om förfinad indelning</title>
+	<link rel="stylesheet" href="../../../res/styles.css"/>
+	<script src="../../../res/db.js" defer></script>
+	<script src="../../../res/sats.js" defer></script>
+	<!-- Externa resurser -->
+	<link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="../../../index.html">Hem</a>
+			<button id="soek-knapp">Sök</button>
+		</nav>
+		<h1>Satsen om förfinad indelning</h1>
+	</header>
+	<main>
+		<section>
+			<h3>Formulering</h3>
+			<p>
+				Låt \( \chi \) vara någon indelning och låt \( \chi'=\chi\cup\{ \tilde{x} \} \) där \( \tilde{x}\in(a,b) \). Vi har att:
+				$$
+					\overline{S}_\chi\geq\overline{S}_{\chi'}
+				$$
+				och
+				$$
+					\underline{S}_\chi\leq\underline{S}_{\chi'}
+				$$
+			</p>
+		</section>
+		<section>
+			<h3>Bevis</h3>
+			<p>
+				Antag att \( \tilde{x}\in[x_{m-1},x_m] \). Vi har att:
+				$$
+				\begin{align*}
+					\overline{S}_\chi
+					&=
+					\color{red}\sum_{k=1}^{m-1}(x_k-x_{k-1})\sup_{[x_{k-1},x_k]}f
+					\color{black}+
+					\color{green}(x_m-x_{m-1})\sup_{[x_{m-1},x_m]}f\\
+					&+
+					\color{blue}\sum_{k=m+1}^n(x_k-x_{k-1})\sup_{[x_{k-1},x_k]}f
+				\end{align*}
+				$$
+				och
+				$$
+				\begin{align*}
+					\overline{S}_{\chi'}
+					&=
+					\color{red}\sum_{k=1}^{m-1}(x_k-x_{k-1})\sup_{[x_{k-1},x_k]}f
+					\color{black}+
+					\color{orange}(\tilde{x}-x_{m-1})\sup_{[x_{m-1},\tilde{x}]}f\\
+					&+
+					\color{magenta}(x_m-\tilde{x})\sup_{[\tilde{x},x_{m}]}f
+					\color{black}+
+					\color{blue}\sum_{k=m+1}^n(x_k-x_{k-1})\sup_{[x_{k-1},x_k]}f
+					\color{black}.
+				\end{align*}
+				$$
+				\( \sup_{[x_{m-1},x_m]}f \) är en övre begränsning för \( f \) på \( [x_{m-1},x_m] \), medans \( \sup_{[x_{m-1},\tilde{x}]}f \) är den minsta övre begränsning av \( f \) på \( [x_{m-1},\tilde{x}] \). Därför följer att:
+				$$
+					\sup_{[x_{m-1},\tilde{x}]}f\leq\sup_{[x_{m-1},x_m]}f,\quad\sup_{[\tilde{x},x_m]}f\leq\sup_{[x_{m-1},x_m]}f
+				$$
+				Alltså gäller att:
+				$$
+				\begin{align*}
+					\color{orange}(\tilde{x}-x_{m-1})\sup_{[x_{m-1},\tilde{x}]}f\color{black}+\color{magenta}(x_m-\tilde{x})\sup_{[\tilde{x},x_m]}f
+					&\leq(\tilde{x}-x_{m-1}+x_m-\tilde{x})\sup_{[x_{m-1},x_m]}f\\
+					&=\color{green}(x_m-x_{m-1})\sup_{[x_{m-1},x_m]}f
+				\end{align*}
+				$$
+				Detta visar då att \( \overline{S}_\chi\geq\overline{S}_{\chi'} \). Att \( \underline{S}_\chi\leq\underline{S}_{\chi'} \) visas analogt.
+			</p>
+			<div class="qed"></div>
+		</section>
+	</main>
+</body>
+</html>
